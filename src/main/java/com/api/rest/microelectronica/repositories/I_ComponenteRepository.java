@@ -22,25 +22,23 @@ public interface I_ComponenteRepository extends JpaRepository<ComponenteEntity, 
 		public abstract ComponenteEntity findById(int id);
 		
 		@Query("select c from ComponenteEntity c where c.codigo like %:codigo%")
-		public abstract List<ComponenteEntity> findByCodigo(String codigo);
+		public abstract Page<ComponenteEntity> findByCodigo(String codigo, Pageable pageable);
 		@Query("select c from ComponenteEntity c where c.imagen like %:imagen%")
-		public abstract List<ComponenteEntity> findByImagen(String imagen);
+		public abstract Page<ComponenteEntity> findByImagen(String imagen, Pageable pageable);
 		@Query("select c from ComponenteEntity c where c.nroPieza like %:nroPieza%")
-		public abstract List<ComponenteEntity> findByNroPieza(String nroPieza);
+		public abstract Page<ComponenteEntity> findByNroPieza(String nroPieza, Pageable pageable);
 		@Query("select c from ComponenteEntity c where c.categoria like %:categoria%")
-		public abstract List<ComponenteEntity> findByCategoria(String categoria);
+		public abstract Page<ComponenteEntity> findByCategoria(String categoria, Pageable pageable);
 		@Query("select c from ComponenteEntity c where c.descripcion like %:descripcion%")
-		public abstract List<ComponenteEntity> findByDescripcion(String descripcion);
+		public abstract Page<ComponenteEntity> findByDescripcion(String descripcion , Pageable pageable);
 		@Query("select c from ComponenteEntity c where c.fabricante like %:fabricante%")
-		public abstract List<ComponenteEntity> findByFabricante(String fabricante);
+		public abstract Page<ComponenteEntity> findByFabricante(String fabricante , Pageable pageable);
 		
-		public abstract List<ComponenteEntity> findByStock(int stock);
+		public abstract Page<ComponenteEntity> findByStock(int stock , Pageable pageable);
 
-		public abstract List<ComponenteEntity> findByPrecio(double precio);
+		public abstract Page<ComponenteEntity> findByPrecio(double precio , Pageable pageable);
 
-		public abstract List<ComponenteEntity> findAll();
-		
-		public abstract Page<ComponenteEntity> findAll(Pageable pageable);
+		public abstract Page<ComponenteEntity> findAll(Pageable pageable );
 
 	
 	

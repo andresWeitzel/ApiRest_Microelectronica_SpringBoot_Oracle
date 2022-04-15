@@ -1,7 +1,8 @@
 package com.api.rest.microelectronica.controllers;
 
-import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.api.rest.microelectronica.entities.ComponenteEntity;
 import com.api.rest.microelectronica.services.ComponenteService;
 
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
-@RequestMapping("/componentes")
+@RequestMapping("/v1/componentes")
 public class ComponenteController {
 
 	@Autowired
@@ -27,31 +32,67 @@ public class ComponenteController {
 	// ============= MÉTODOS HTTP CRUD ==============
 	// ===============================================
 
-	// ----POST----
+	// ================
+	// ===== POST =====
+	// =================
+	@Operation(summary = "Inserción de un Componente")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se ha Insertado el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Insertar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Inserción del Componente no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@PostMapping("/")
-	public boolean addComponente(@RequestBody ComponenteEntity componente) {
+	public void addComponente(@RequestBody ComponenteEntity componente) {
 
-		return componenteService.addComponente(componente);
+		 componenteService.addComponente(componente);
 	}
 
-	// ----PUT-----
+	// ================
+	// ===== PUT=====
+	// =================
+	@Operation(summary = "Actualización de un Componente")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se ha Actualizado el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Actualizar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Actualización del Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@PutMapping("/")
-	public boolean updateComponente(@RequestBody ComponenteEntity componente) {
+	public void updateComponente(@RequestBody ComponenteEntity componente) {
 
-		return componenteService.updateComponente(componente);
+		 componenteService.updateComponente(componente);
 	}
 
-	// ---DELETE---
+	// ==================
+	// ===== DELETE =====
+	// ==================
+	@Operation(summary = "Eliminación de un Componente por su ID")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se ha Eliminado el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Eliminar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Eliminación del Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@DeleteMapping("/{id}")
-	public boolean deleteComponente(@PathVariable("id") int id) {
+	public void deleteComponente(@PathVariable("id") int id) {
 
-		return componenteService.deleteComponente(id);
+		 componenteService.deleteComponente(id);
 	}
 
-	// ---GET---
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ---LISTADO PAGINADO Y COMPLETO---
+	@Operation(summary = "Listado Paginado de Componentes")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se ha Traído el Listado de Componentes", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "El Listado de Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/listado")
-	public List<ComponenteEntity> getAll(Pageable pageable) {
+	public Page<ComponenteEntity> getAll(Pageable pageable) {
 
 		return componenteService.getAllComponente(pageable);
 	}
@@ -60,69 +101,148 @@ public class ComponenteController {
 	// ============= MÉTODOS HTTP BÚSQUEDA =============
 	// ==================================================
 
-	// ---GET---
-	@PostMapping("/id/{id}")
+	// ===============
+	// ===== GET =====
+	// ===============
+	@Operation(summary = "Búsqueda de un Componente por su ID")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se ha Traído el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Encontrar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Búsqueda del Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
+	@GetMapping("/id/{id}")
 	public ComponenteEntity getById(@PathVariable("id") int id) {
 
 		return componenteService.findById(id);
 	}
 
-	// ---GET---
+	// ===============
+	// ===== GET =====
+	// ===============
+	@Operation(summary = "Búsqueda Paginada de Componentes por su Código")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/codigo/{codigo}")
-	public List<ComponenteEntity> getByCodigo(@PathVariable("codigo") String codigo) {
+	public Page<ComponenteEntity> getByCodigo(@PathVariable("codigo") String codigo, Pageable pageable) {
 
-		return componenteService.findByCodigo(codigo);
+		return componenteService.findByCodigo(codigo, pageable);
 	}
 
-	// ---GET---
+	// ===============
+	// ===== GET =====
+	// ===============
+	@Operation(summary = "Búsqueda Paginada de Componentes por su Imagen")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/imagen/{imagen}")
-	public List<ComponenteEntity> getByImagen(@PathVariable("imagen") String imagen) {
+	public Page<ComponenteEntity> getByImagen(@PathVariable("imagen") String imagen, Pageable pageable) {
 
-		return componenteService.findByImagen(imagen);
+		return componenteService.findByImagen(imagen, pageable);
 	}
 
-	// ---GET---
+	// ===============
+	// ===== GET =====
+	// ===============
+	@Operation(summary = "Búsqueda Paginada de Componentes por su Número de Piezas")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/nro-de-pieza/{nroPieza}")
-	public List<ComponenteEntity> getByNroPieza(@PathVariable("nroPieza") String nroPieza) {
+	public Page<ComponenteEntity> getByNroPieza(@PathVariable("nroPieza") String nroPieza, Pageable pageable) {
 
-		return componenteService.findByNroPieza(nroPieza);
+		return componenteService.findByNroPieza(nroPieza, pageable);
 	}
 
-	// ---GET---
+	// ===============
+	// ===== GET =====
+	// ===============
+	@Operation(summary = "Búsqueda Paginada de Componentes por su Categoría")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/categoria/{categoria}")
-	public List<ComponenteEntity> getByCategoria(@PathVariable("nroPieza") String nroPieza) {
+	public Page<ComponenteEntity> getByCategoria(@PathVariable("nroPieza") String nroPieza, Pageable pageable) {
 
-		return componenteService.findByNroPieza(nroPieza);
+		return componenteService.findByNroPieza(nroPieza, pageable);
 	}
 
-	// ---GET---
+	// ===============
+	// ===== GET =====
+	// ===============
+	@Operation(summary = "Búsqueda Paginada de Componentes por su Descripción")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/descripcion/{descripcion}")
-	public List<ComponenteEntity> getByDescripcion(@PathVariable("descripcion") String descripcion) {
+	public Page<ComponenteEntity> getByDescripcion(@PathVariable("descripcion") String descripcion, Pageable pageable) {
 
-		return componenteService.findByDescripcion(descripcion);
+		return componenteService.findByDescripcion(descripcion, pageable);
 	}
 
-	// ---GET---
+	// ===============
+	// ===== GET =====
+	// ===============
+	@Operation(summary = "Búsqueda Paginada de Componentes por su Fabricante")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/fabricante/{fabricante}")
-	public List<ComponenteEntity> getByFabricante(@PathVariable("fabricante") String fabricante) {
+	public Page<ComponenteEntity> getByFabricante(@PathVariable("fabricante") String fabricante, Pageable pageable) {
 
-		return componenteService.findByFabricante(fabricante);
+		return componenteService.findByFabricante(fabricante, pageable);
 	}
 
-	// ---GET---
+	// ===============
+	// ===== GET =====
+	// ===============
+	@Operation(summary = "Búsqueda Paginada de Componentes por su Stock")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/stock/{stock}")
-	public List<ComponenteEntity> getByStock(@PathVariable("stock") int stock) {
+	public Page<ComponenteEntity> getByStock(@PathVariable("stock") int stock, Pageable pageable) {
 
-		return componenteService.findByStock(stock);
+		return componenteService.findByStock(stock, pageable);
 	}
 
-	// ---GET---
+	// ===============
+	// ===== GET =====
+	// ===============
+	@Operation(summary = "Búsqueda Paginada de Componentes por su Precio")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/precio/{precio}")
-	public List<ComponenteEntity> getByPrecio(@PathVariable("precio") double precio) {
+	public Page<ComponenteEntity> getByPrecio(@PathVariable("precio") double precio, Pageable pageable) {
 
-		return componenteService.findByPrecio(precio);
+		return componenteService.findByPrecio(precio, pageable);
 	}
-
-
 
 }

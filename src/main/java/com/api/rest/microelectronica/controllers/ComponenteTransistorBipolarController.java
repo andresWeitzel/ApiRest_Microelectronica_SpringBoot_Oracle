@@ -18,7 +18,7 @@ import com.api.rest.microelectronica.services.ComponenteTransistorBipolarService
 
 
 @RestController
-@RequestMapping("/componentes-transistores-bipolares")
+@RequestMapping("/v1/componentes-transistores-bipolares")
 public class ComponenteTransistorBipolarController {
 
 	@Autowired

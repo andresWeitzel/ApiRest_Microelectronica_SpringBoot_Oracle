@@ -18,7 +18,7 @@ import com.api.rest.microelectronica.services.ComponenteCapacitorElectroliticoSe
 
 
 @RestController
-@RequestMapping("/componentes-capacitores-electroliticos")
+@RequestMapping("/v1/componentes-capacitores-electroliticos")
 public class ComponenteCapacitorElectroliticoController {
 
 	@Autowired

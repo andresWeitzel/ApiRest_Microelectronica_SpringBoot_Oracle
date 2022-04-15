@@ -1,7 +1,8 @@
 package com.api.rest.microelectronica.services;
 
-import java.util.List;
 
+
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import com.api.rest.microelectronica.entities.ComponenteDetalleEntity;
 import com.api.rest.microelectronica.repositories.I_ComponenteDetalleRepository;
-
 
 @Service
 public class ComponenteDetalleService {
@@ -22,7 +22,9 @@ public class ComponenteDetalleService {
 
 	// =============== MÉTODOS CRUD ====================
 
-	// ------ INSERT --------
+	// ==================
+	// ===== INSERT =====
+	// ==================
 	public boolean addComponente(ComponenteDetalleEntity componenteDetalle) {
 		try {
 			if (componenteDetalle == null) {
@@ -39,7 +41,9 @@ public class ComponenteDetalleService {
 		}
 	}
 
-	// ------ UPDATE --------
+	// ==================
+	// ===== UPDATE =====
+	// ==================
 	public boolean updateComponente(ComponenteDetalleEntity componenteDetalle) {
 		try {
 			if (componenteDetalle == null) {
@@ -57,7 +61,9 @@ public class ComponenteDetalleService {
 		}
 	}
 
-	// ------ DELETE --------
+	// ==================
+	// ===== DELETE =====
+	// ==================
 	public boolean deleteComponente(int id) {
 		try {
 			if (id <= 0) {
@@ -74,70 +80,96 @@ public class ComponenteDetalleService {
 		}
 	}
 
-	// ------ SELECT --------
-	//------- LISTADO COMPLETO ---------
-	public List<ComponenteDetalleEntity> getAllComponente() {
+	// ===================
+	// ===== GET ALL =====
+	// ===================
 
-		return iComponenteDetalleRepository.findAll();
-	}
+	// ------- LISTADO PAGINADO ---------
+	public Page<ComponenteDetalleEntity> getAllComponente(Pageable pageable) {
 
-	// ------ SELECT --------
-	//------- LISTADO PAGINADO ---------
-	public List<ComponenteDetalleEntity> getAllComponente(Pageable pageable) {
-
-		return iComponenteDetalleRepository.findAll(pageable).getContent();
+		return iComponenteDetalleRepository.findAll(pageable);
 	}
 
 	// =============== MÉTODOS DE BUSQUEDA ====================
 
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ------ ID --------
 	public ComponenteDetalleEntity findById(int id) {
 		return iComponenteDetalleRepository.findById(id);
 	}
 
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ------ ID DE COMPONENTE --------
 	public ComponenteDetalleEntity findByIdComponente(int id) {
 		return iComponenteDetalleRepository.findByIdComponente(id);
 	}
 
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ------ HOJA DE DATOS --------
-	public List<ComponenteDetalleEntity> findByHojaDeDatos(String hojaDeDatos) {
-		return iComponenteDetalleRepository.findByHojaDeDatos(hojaDeDatos);
+	public Page<ComponenteDetalleEntity> findByHojaDeDatos(String hojaDeDatos, Pageable pageable) {
+		return iComponenteDetalleRepository.findByHojaDeDatos(hojaDeDatos, pageable);
 	}
 
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ------ LONGITUD --------
-	public List<ComponenteDetalleEntity> findByLongitud(String longitud) {
-		return iComponenteDetalleRepository.findByLongitud(longitud);
+	public Page<ComponenteDetalleEntity> findByLongitud(String longitud, Pageable pageable) {
+		return iComponenteDetalleRepository.findByLongitud(longitud, pageable);
 	}
 
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ------ ANCHO --------
-	public List<ComponenteDetalleEntity> findByAncho(String ancho) {
-		return iComponenteDetalleRepository.findByAncho(ancho);
+	public Page<ComponenteDetalleEntity> findByAncho(String ancho, Pageable pageable) {
+		return iComponenteDetalleRepository.findByAncho(ancho, pageable);
 	}
 
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ------ PESO --------
-	public List<ComponenteDetalleEntity> findByPeso(String peso) {
-		return iComponenteDetalleRepository.findByPeso(peso);
+	public Page<ComponenteDetalleEntity> findByPeso(String peso, Pageable pageable) {
+		return iComponenteDetalleRepository.findByPeso(peso, pageable);
 	}
 
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ------ MATERIAL --------
-	public List<ComponenteDetalleEntity> findByMaterial(String material) {
-		return iComponenteDetalleRepository.findByMaterial(material);
+	public Page<ComponenteDetalleEntity> findByMaterial(String material, Pageable pageable) {
+		return iComponenteDetalleRepository.findByMaterial(material, pageable);
 	}
 
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ------ VOLTAJE RECOMENDADO --------
-	public List<ComponenteDetalleEntity> findByVoltajeRecomendado(String voltajeRecomendado) {
-		return iComponenteDetalleRepository.findByVoltajeRecomendado(voltajeRecomendado);
+	public Page<ComponenteDetalleEntity> findByVoltajeRecomendado(String voltajeRecomendado, Pageable pageable) {
+		return iComponenteDetalleRepository.findByVoltajeRecomendado(voltajeRecomendado, pageable);
 	}
 
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ------ VOLTAJE MINIMO DE ENTRADA --------
-	public List<ComponenteDetalleEntity> findByVoltajeMinEntrada(String voltajeMinEntrada) {
-		return iComponenteDetalleRepository.findByVoltajeMinEntrada(voltajeMinEntrada);
+	public Page<ComponenteDetalleEntity> findByVoltajeMinEntrada(String voltajeMinEntrada, Pageable pageable) {
+		return iComponenteDetalleRepository.findByVoltajeMinEntrada(voltajeMinEntrada, pageable);
 	}
 
+	// ===============
+	// ===== GET =====
+	// ===============
 	// ------ VOLTAJE MAXIMO DE ENTRADA --------
-	public List<ComponenteDetalleEntity> findByVoltajeMaxEntrada(String voltajeMaxEntrada) {
-		return iComponenteDetalleRepository.findByVoltajeMinEntrada(voltajeMaxEntrada);
+	public Page<ComponenteDetalleEntity> findByVoltajeMaxEntrada(String voltajeMaxEntrada, Pageable pageable) {
+		return iComponenteDetalleRepository.findByVoltajeMinEntrada(voltajeMaxEntrada, pageable);
 	}
 
 }

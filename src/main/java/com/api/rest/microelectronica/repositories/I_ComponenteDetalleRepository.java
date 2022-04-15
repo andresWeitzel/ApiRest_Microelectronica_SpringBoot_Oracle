@@ -23,25 +23,24 @@ public interface I_ComponenteDetalleRepository extends JpaRepository<ComponenteD
 		public abstract ComponenteDetalleEntity findById(int id);
 		
 		public abstract ComponenteDetalleEntity findByIdComponente(int id);
-		@Query("select c from ComponenteDetalleEntity c where c.hojaDeDatos like %:hojaDeDatos%")
-		public abstract List<ComponenteDetalleEntity> findByHojaDeDatos(String hojaDeDatos);
-		@Query("select c from ComponenteDetalleEntity c where c.longitud like %:longitud%")
-		public abstract List<ComponenteDetalleEntity> findByLongitud(String longitud);
-		@Query("select c from ComponenteDetalleEntity c where c.ancho like %:ancho%")
-		public abstract List<ComponenteDetalleEntity> findByAncho(String ancho);
-		@Query("select c from ComponenteDetalleEntity c where c.peso like %:peso%")
-		public abstract List<ComponenteDetalleEntity> findByPeso(String peso);
-		@Query("select c from ComponenteDetalleEntity c where c.material like %:material%")
-		public abstract List<ComponenteDetalleEntity> findByMaterial(String material);
-		@Query("select c from ComponenteDetalleEntity c where c.voltajeRecomendado like %:voltajeRecomendado%")
-		public abstract List<ComponenteDetalleEntity> findByVoltajeRecomendado(String voltajeRecomendado);
-		@Query("select c from ComponenteDetalleEntity c where c.voltajeMinEntrada like %:voltajeMinEntrada%")
-		public abstract List<ComponenteDetalleEntity> findByVoltajeMinEntrada(String voltajeMinEntrada);
-		@Query("select c from ComponenteDetalleEntity c where c.voltajeMaxEntrada like %:voltajeMaxEntrada%")
-		public abstract List<ComponenteDetalleEntity> findByVoltajeMaxEntrada(String voltajeMaxEntrada);
-	
-		public abstract List<ComponenteDetalleEntity> findAll();
 		
+		@Query("select c from ComponenteDetalleEntity c where c.hojaDeDatos like %:hojaDeDatos%")
+		public abstract Page<ComponenteDetalleEntity> findByHojaDeDatos(String hojaDeDatos , Pageable pageable);
+		@Query("select c from ComponenteDetalleEntity c where c.longitud like %:longitud%")
+		public abstract Page<ComponenteDetalleEntity> findByLongitud(String longitud, Pageable pageable);
+		@Query("select c from ComponenteDetalleEntity c where c.ancho like %:ancho%")
+		public abstract Page<ComponenteDetalleEntity> findByAncho(String ancho, Pageable pageable);
+		@Query("select c from ComponenteDetalleEntity c where c.peso like %:peso%")
+		public abstract Page<ComponenteDetalleEntity> findByPeso(String peso, Pageable pageable);
+		@Query("select c from ComponenteDetalleEntity c where c.material like %:material%")
+		public abstract Page<ComponenteDetalleEntity> findByMaterial(String material, Pageable pageable);
+		@Query("select c from ComponenteDetalleEntity c where c.voltajeRecomendado like %:voltajeRecomendado%")
+		public abstract Page<ComponenteDetalleEntity> findByVoltajeRecomendado(String voltajeRecomendado, Pageable pageable);
+		@Query("select c from ComponenteDetalleEntity c where c.voltajeMinEntrada like %:voltajeMinEntrada%")
+		public abstract Page<ComponenteDetalleEntity> findByVoltajeMinEntrada(String voltajeMinEntrada, Pageable pageable);
+		@Query("select c from ComponenteDetalleEntity c where c.voltajeMaxEntrada like %:voltajeMaxEntrada%")
+		public abstract Page<ComponenteDetalleEntity> findByVoltajeMaxEntrada(String voltajeMaxEntrada, Pageable pageable);
+	
 		public abstract Page<ComponenteDetalleEntity> findAll(Pageable pageable);
 		
 	
