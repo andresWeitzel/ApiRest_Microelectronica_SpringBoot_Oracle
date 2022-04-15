@@ -2,4 +2,6 @@
 
 * Api Restful para la Aplicación Web de Microelectrónica
 
-https://www.baeldung.com/spring-rest-openapi-documentation
+Config open-api y Swagger: https://www.baeldung.com/spring-rest-openapi-documentation
+
+Tutorial doc swagger : https://www.youtube.com/watch?v=WIvZVv2chXM
