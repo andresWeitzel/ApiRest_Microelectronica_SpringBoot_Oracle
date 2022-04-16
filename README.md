@@ -1,7 +1,7 @@
 # ApiRest_Microelectronica_SpringBoot_Oracle
 
-* Api Restful para la Aplicación Web de Microelectrónica
-* La Misma consta de todas las Operaciones CRUD , Búsquedas independientes de tipo Like , todos los objetos de tipo getBy se manipulan como paginados, salvo los getById , Se Desarrollan Clases Específicas para el Manejo de Excepciones para cada Servicio Completo , todas las funcionalidades tienen generación de logs en el Server para los errores y excepciones, documentación completa de la Api con open-api para la visualización con swagger, las anotaciones de open-api se aplican junto con los códigos de respuesta de tipo HTTP para cada función en los controllers
+* Api Restful para la Aplicación Web de Microelectrónica AppGestionMicroelectronica_SpringBoot (https://github.com/andresWeitzel/AppGestionMicroelectronica_SpringBoot)
+* La Misma consta de todas las Operaciones CRUD , Búsquedas independientes de tipo Like , todos los objetos de tipo getBy se manipulan como paginados, salvo los getById que se requiere un response por objeto, Se Desarrollan Clases Específicas para el Manejo de Excepciones para cada Servicio Completo , Todas las funcionalidades tienen generación de logs en el Server para los errores y excepciones, documentación completa de la Api con open-api para la visualización con swagger, las anotaciones de open-api se aplican junto con los códigos de respuesta de tipo HTTP para cada función en los controllers
 * Se pone a disposición todos los recursos anteriores para Componentes, Componentes Detalles y Capacitores Electrolíticos . 
 * Repositorio de la Base de Datos de la Api : https://github.com/andresWeitzel/db_microelectronica_Oracle
 
