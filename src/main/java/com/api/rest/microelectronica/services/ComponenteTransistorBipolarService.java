@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ import com.api.rest.microelectronica.repositories.I_ComponenteTransistorBipolarR
 public class ComponenteTransistorBipolarService {
 
 	@Autowired
-	private I_ComponenteTransistorBipolarRepository iComponenteTransistorBipolarRepository;
+	private I_ComponenteTransistorBipolarRepository iTransistorBipolarRepository;
 
 	// =============== LOGS ====================
 	private static final Logger logger = org.apache.logging.log4j.LogManager.getLogger(ComponenteTransistorBipolarService.class);
@@ -23,36 +24,36 @@ public class ComponenteTransistorBipolarService {
 	// =============== MÉTODOS CRUD ====================
 
 	// ------ INSERT --------
-	public boolean addComponente(ComponenteTransistorBipolarEntity componenteTransistorBipolar) {
+	public boolean addComponente(ComponenteTransistorBipolarEntity TransistorBipolar) {
 		try {
-			if (componenteTransistorBipolar == null) {
-				logger.error("ERROR addComponente : EL COMPONENTE " + componenteTransistorBipolar + " ES NULO!!");
+			if (TransistorBipolar == null) {
+				logger.error("ERROR addComponente : EL COMPONENTE " + TransistorBipolar + " ES NULO!!");
 				return false;
 			} else {
-				iComponenteTransistorBipolarRepository.save(componenteTransistorBipolar);
+				iTransistorBipolarRepository.save(TransistorBipolar);
 				return true;
 			}
 
 		} catch (Exception e) {
-			logger.error("ERROR addComponente : EL COMPONENTE " + componenteTransistorBipolar + " NO SE HA INSERTADO EN LA DB!!");
+			logger.error("ERROR addComponente : EL COMPONENTE " + TransistorBipolar + " NO SE HA INSERTADO EN LA DB!!");
 			return false;
 		}
 	}
 
 	// ------ UPDATE --------
-	public boolean updateComponente(ComponenteTransistorBipolarEntity componenteTransistorBipolar) {
+	public boolean updateComponente(ComponenteTransistorBipolarEntity TransistorBipolar) {
 		try {
-			if (componenteTransistorBipolar == null) {
-				logger.error("ERROR updateComponente : EL COMPONENTE " + componenteTransistorBipolar + " ES NULO!!");
+			if (TransistorBipolar == null) {
+				logger.error("ERROR updateComponente : EL COMPONENTE " + TransistorBipolar + " ES NULO!!");
 				return false;
 			} else {
-				iComponenteTransistorBipolarRepository.save(componenteTransistorBipolar);
+				iTransistorBipolarRepository.save(TransistorBipolar);
 				return true;
 			}
 
 		} catch (Exception e) {
 			logger.error(
-					"ERROR updateComponente : EL COMPONENTE " + componenteTransistorBipolar + " NO SE HA ACTUALIZADO EN LA DB!!");
+					"ERROR updateComponente : EL COMPONENTE " + TransistorBipolar + " NO SE HA ACTUALIZADO EN LA DB!!");
 			return false;
 		}
 	}
@@ -64,7 +65,7 @@ public class ComponenteTransistorBipolarService {
 				logger.error("ERROR deleteComponente : EL COMPONENTE CON EL " + id + " NO EXISTE!!");
 				return false;
 			} else {
-				iComponenteTransistorBipolarRepository.delete(iComponenteTransistorBipolarRepository.findById(id));
+				iTransistorBipolarRepository.delete(iTransistorBipolarRepository.findById(id));
 				return true;
 			}
 
@@ -78,71 +79,71 @@ public class ComponenteTransistorBipolarService {
 	//------- LISTADO COMPLETO ---------
 	public List<ComponenteTransistorBipolarEntity> getAllComponente() {
 
-		return iComponenteTransistorBipolarRepository.findAll();
+		return iTransistorBipolarRepository.findAll();
 	}
 
 	// ------ SELECT --------
 	//------- LISTADO PAGINADO ---------
 	public List<ComponenteTransistorBipolarEntity> getAllComponente(Pageable pageable) {
 
-		return iComponenteTransistorBipolarRepository.findAll(pageable).getContent();
+		return iTransistorBipolarRepository.findAll(pageable).getContent();
 	}
 
 	// =============== MÉTODOS DE BUSQUEDA ====================
 
 	// ------ ID --------
-	public ComponenteTransistorBipolarEntity findById(int id) {
-		return iComponenteTransistorBipolarRepository.findById(id);
+	public ComponenteTransistorBipolarEntity findById(int id ) {
+		return iTransistorBipolarRepository.findById(id);
 	}
 
 	// ------ ID DE COMPONENTE --------
-	public ComponenteTransistorBipolarEntity findByIdComponente(int id) {
-		return iComponenteTransistorBipolarRepository.findByIdComponente(id);
+	public ComponenteTransistorBipolarEntity findByIdComponente(int id ) {
+		return iTransistorBipolarRepository.findByIdComponente(id);
 	}
 
 	// ------ TIPO --------
-	public List<ComponenteTransistorBipolarEntity> findByTipo(String tipo) {
-		return iComponenteTransistorBipolarRepository.findByTipo(tipo);
+	public Page<ComponenteTransistorBipolarEntity> findByTipo(String tipo , Pageable pageable) {
+		return iTransistorBipolarRepository.findByTipo(tipo , pageable);
 	}
 
 	// ------ VOLTAJE_COLEC_EMIS --------
-	public List<ComponenteTransistorBipolarEntity> findByVoltajeColecEmis(String voltajeColecEmis) {
-		return iComponenteTransistorBipolarRepository.findByVoltajeColecEmis(voltajeColecEmis);
+	public Page<ComponenteTransistorBipolarEntity> findByVoltajeColecEmis(String voltajeColecEmis , Pageable pageable) {
+		return iTransistorBipolarRepository.findByVoltajeColecEmis(voltajeColecEmis , pageable);
 	}
 
 	// ------ VOLTAJE_COLEC_BASE --------
-	public List<ComponenteTransistorBipolarEntity> findByVoltajeColecBase(String voltajeColecBase) {
-		return iComponenteTransistorBipolarRepository.findByVoltajeColecBase(voltajeColecBase);
+	public Page<ComponenteTransistorBipolarEntity> findByVoltajeColecBase(String voltajeColecBase , Pageable pageable) {
+		return iTransistorBipolarRepository.findByVoltajeColecBase(voltajeColecBase , pageable);
 	}
 
 	// ------ VOLTAJE_EMIS_BASE --------
-	public List<ComponenteTransistorBipolarEntity> findByVoltajeEmisBase(String voltajeEmisBase) {
-		return iComponenteTransistorBipolarRepository.findByVoltajeEmisBase(voltajeEmisBase);
+	public Page<ComponenteTransistorBipolarEntity> findByVoltajeEmisBase(String voltajeEmisBase , Pageable pageable) {
+		return iTransistorBipolarRepository.findByVoltajeEmisBase(voltajeEmisBase , pageable);
 	}
 
 	// ------ VOLTAJE_COLEC_EMIS_SAT --------
-	public List<ComponenteTransistorBipolarEntity> findByVoltajeColecEmisSat(String voltajeColecEmisSat) {
-		return iComponenteTransistorBipolarRepository.findByVoltajeColecEmisSat(voltajeColecEmisSat);
+	public Page<ComponenteTransistorBipolarEntity> findByVoltajeColecEmisSat(String voltajeColecEmisSat , Pageable pageable) {
+		return iTransistorBipolarRepository.findByVoltajeColecEmisSat(voltajeColecEmisSat , pageable);
 	}
 
 	// ------ CORRIENTE_COLEC --------
-	public List<ComponenteTransistorBipolarEntity> findByCorrienteColec(String corriente_colec) {
-		return iComponenteTransistorBipolarRepository.findByCorrienteColec(corriente_colec);
+	public Page<ComponenteTransistorBipolarEntity> findByCorrienteColec(String corriente_colec , Pageable pageable) {
+		return iTransistorBipolarRepository.findByCorrienteColec(corriente_colec , pageable);
 	}
 
 	// ------ GANANCIA_HFE --------
-	public List<ComponenteTransistorBipolarEntity> findByGananciaHfe(String gananciaHfe) {
-		return iComponenteTransistorBipolarRepository.findByGananciaHfe(gananciaHfe);
+	public Page<ComponenteTransistorBipolarEntity> findByGananciaHfe(String gananciaHfe , Pageable pageable) {
+		return iTransistorBipolarRepository.findByGananciaHfe(gananciaHfe , pageable);
 	}
 
 	// ------ DISIP_MAX --------
-	public List<ComponenteTransistorBipolarEntity> findByDisipMax(String disipMax) {
-		return iComponenteTransistorBipolarRepository.findByDisipMax(disipMax);
+	public Page<ComponenteTransistorBipolarEntity> findByDisipMax(String disipMax , Pageable pageable) {
+		return iTransistorBipolarRepository.findByDisipMax(disipMax , pageable);
 	}
 	
 	// ------ TEMP_JUNTURA --------
-	public List<ComponenteTransistorBipolarEntity> findByTempJuntura(String tempJuntura) {
-		return iComponenteTransistorBipolarRepository.findByTempJuntura(tempJuntura);
+	public Page<ComponenteTransistorBipolarEntity> findByTempJuntura(String tempJuntura , Pageable pageable) {
+		return iTransistorBipolarRepository.findByTempJuntura(tempJuntura , pageable);
 	}
 
 	

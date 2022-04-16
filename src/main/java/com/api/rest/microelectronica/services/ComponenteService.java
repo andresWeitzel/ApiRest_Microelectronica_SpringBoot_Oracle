@@ -38,7 +38,7 @@ public class ComponenteService {
 
 		} catch (Exception e) {
 			logger.error("ERROR addComponente : EL COMPONENTE " + componente + " NO SE HA INSERTADO EN LA DB!!");
-			throw new ComponenteNotFoundException("NO SE PUDO AGREGAR EL COMPONENTE ", e, true, true);
+			throw new ComponenteNotFoundException("NO SE PUDO AGREGAR EL COMPONENTE ", e, false, true);
 		}
 	}
 
@@ -60,7 +60,7 @@ public class ComponenteService {
 
 		} catch (Exception e) {
 			logger.error("ERROR updateComponente : EL COMPONENTE " + componente + " NO SE HA ACTUALIZADO EN LA DB!!");
-			throw new ComponenteNotFoundException("NO SE PUDO ACTUALIZAR EL COMPONENTE ", e, true, true);
+			throw new ComponenteNotFoundException("NO SE PUDO ACTUALIZAR EL COMPONENTE ", e, false, true);
 		}
 	}
 
@@ -88,7 +88,7 @@ public class ComponenteService {
 			logger.error("ERROR deleteComponente : EL COMPONENTE CON EL ID " + id
 					+ " NO SE HA ELIMINADO DE LA DB!! . CAUSADO POR " + e);
 
-			throw new ComponenteNotFoundException("NO SE PUDO ELIMINAR EL COMPONENTE ", e, true, true);
+			throw new ComponenteNotFoundException("NO SE PUDO ELIMINAR EL COMPONENTE ", e, false, true);
 
 		}
 	}

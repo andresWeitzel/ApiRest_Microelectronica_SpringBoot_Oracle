@@ -51,9 +51,9 @@ public class ComponenteDetalleController {
             content = @Content)
     })
 	@PostMapping("/")
-	public boolean addComponenteDetalle(@RequestBody ComponenteDetalleEntity componenteDetalle) {
+	public void addComponenteDetalle(@RequestBody ComponenteDetalleEntity componenteDetalle) {
 
-		return componenteDetalleService.addComponente(componenteDetalle);
+		componenteDetalleService.addComponenteDetalle(componenteDetalle);
 	}
 
 	// ===============
@@ -75,9 +75,9 @@ public class ComponenteDetalleController {
             content = @Content)
     })
 	@PutMapping("/")
-	public boolean updateComponenteDetalle(@RequestBody ComponenteDetalleEntity componenteDetalle) {
+	public void updateComponenteDetalle(@RequestBody ComponenteDetalleEntity componenteDetalle) {
 
-		return componenteDetalleService.updateComponente(componenteDetalle);
+		componenteDetalleService.updateComponenteDetalle(componenteDetalle);
 	}
 
 	// ==================
@@ -99,9 +99,9 @@ public class ComponenteDetalleController {
             content = @Content)
     })
 	@DeleteMapping("/{id}")
-	public boolean deleteComponenteDetalle(@PathVariable("id") int id) {
+	public void deleteComponenteDetalle(@PathVariable("id") int id) {
 
-		return componenteDetalleService.deleteComponente(id);
+		componenteDetalleService.deleteComponenteDetalle(id);
 	}
 
 	// ===============
@@ -126,7 +126,7 @@ public class ComponenteDetalleController {
 	@GetMapping("/listado")
 	public Page<ComponenteDetalleEntity> getAll(Pageable pageable) {
 
-		return componenteDetalleService.getAllComponente(pageable);
+		return componenteDetalleService.getAllComponenteDetalle(pageable);
 	}
 
 

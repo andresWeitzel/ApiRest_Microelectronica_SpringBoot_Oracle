@@ -24,26 +24,25 @@ public interface I_ComponenteTransistorBipolarRepository extends JpaRepository<C
 		public abstract ComponenteTransistorBipolarEntity findByIdComponente(int idComponente);
 		
 		@Query("select c from ComponenteTransistorBipolarEntity c where c.tipo like %:tipo%")
-		public abstract List<ComponenteTransistorBipolarEntity> findByTipo(String tipo);
+		public abstract Page<ComponenteTransistorBipolarEntity> findByTipo(String tipo , Pageable pageable);
 		@Query("select c from ComponenteTransistorBipolarEntity c where c.voltajeColecEmis like %:voltajeColecEmis%")
-		public abstract List<ComponenteTransistorBipolarEntity> findByVoltajeColecEmis(String voltajeColecEmis);
+		public abstract Page<ComponenteTransistorBipolarEntity> findByVoltajeColecEmis(String voltajeColecEmis , Pageable pageable);
 		@Query("select c from ComponenteTransistorBipolarEntity c where c.voltajeColecBase like %:voltajeColecBase%")
-		public abstract List<ComponenteTransistorBipolarEntity> findByVoltajeColecBase(String voltajeColecBase);
+		public abstract Page<ComponenteTransistorBipolarEntity> findByVoltajeColecBase(String voltajeColecBase , Pageable pageable);
 		@Query("select c from ComponenteTransistorBipolarEntity c where c.voltajeEmisBase like %:voltajeEmisBase%")
-		public abstract List<ComponenteTransistorBipolarEntity> findByVoltajeEmisBase(String voltajeEmisBase);
+		public abstract Page<ComponenteTransistorBipolarEntity> findByVoltajeEmisBase(String voltajeEmisBase , Pageable pageable);
 		@Query("select c from ComponenteTransistorBipolarEntity c where c.voltajeColecEmisSat like %:voltajeColecEmisSat%")
-		public abstract List<ComponenteTransistorBipolarEntity> findByVoltajeColecEmisSat(String voltajeColecEmisSat);
+		public abstract Page<ComponenteTransistorBipolarEntity> findByVoltajeColecEmisSat(String voltajeColecEmisSat , Pageable pageable);
 		@Query("select c from ComponenteTransistorBipolarEntity c where c.corrienteColec like %:corrienteColec%")
-		public abstract List<ComponenteTransistorBipolarEntity> findByCorrienteColec(String corrienteColec);
+		public abstract Page<ComponenteTransistorBipolarEntity> findByCorrienteColec(String corrienteColec , Pageable pageable);
 		@Query("select c from ComponenteTransistorBipolarEntity c where c.gananciaHfe like %:gananciaHfe%")
-		public abstract List<ComponenteTransistorBipolarEntity> findByGananciaHfe(String gananciaHfe);
+		public abstract Page<ComponenteTransistorBipolarEntity> findByGananciaHfe(String gananciaHfe , Pageable pageable);
 		@Query("select c from ComponenteTransistorBipolarEntity c where c.disipMax like %:disipMax%")
-		public abstract List<ComponenteTransistorBipolarEntity> findByDisipMax(String disipMax);
+		public abstract Page<ComponenteTransistorBipolarEntity> findByDisipMax(String disipMax , Pageable pageable);
 		@Query("select c from ComponenteTransistorBipolarEntity c where c.tempJuntura like %:tempJuntura%")
-		public abstract List<ComponenteTransistorBipolarEntity> findByTempJuntura(String tempJuntura);
+		public abstract Page<ComponenteTransistorBipolarEntity> findByTempJuntura(String tempJuntura , Pageable pageable);
 
-		public abstract List<ComponenteTransistorBipolarEntity> findAll();
-		
+	
 		public abstract Page<ComponenteTransistorBipolarEntity> findAll(Pageable pageable);
 		
 	

@@ -3,6 +3,7 @@ package com.api.rest.microelectronica.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -61,84 +62,84 @@ public class ComponenteTransistorBipolarController {
 	@GetMapping("/id/{id}")
 	public ComponenteTransistorBipolarEntity getById(@PathVariable("id") int id) {
 
-		return componenteTransistorBipolarService.findById(id);
+		return componenteTransistorBipolarService.findById(id );
 	}
 
 	// ---GET---
 	@GetMapping("/id-componente/{id_componente}")
-	public ComponenteTransistorBipolarEntity getByIdComponente(@PathVariable("id_componente") int id_componente) {
+	public ComponenteTransistorBipolarEntity getByIdComponente(@PathVariable("id_componente") int id_componente ) {
 
 		return componenteTransistorBipolarService.findByIdComponente(id_componente);
 	}
 
 	// ---GET---
 	@GetMapping("/tipo/{tipo}")
-	public List<ComponenteTransistorBipolarEntity> getByTipo(@PathVariable("tipo") String tipo) {
+	public Page<ComponenteTransistorBipolarEntity> getByTipo(@PathVariable("tipo") String tipo ,  Pageable pageable ) {
 
-		return componenteTransistorBipolarService.findByTipo(tipo);
+		return componenteTransistorBipolarService.findByTipo(tipo , pageable);
 	}
 
 	// ---GET---
 	@GetMapping("/voltaje-colec-emis/{voltColecEmis}")
-	public List<ComponenteTransistorBipolarEntity> getByVoltajeColecEmis(
-			@PathVariable("voltColecEmis") String voltajeColecEmis) {
+	public Page<ComponenteTransistorBipolarEntity> getByVoltajeColecEmis(
+			@PathVariable("voltColecEmis") String voltajeColecEmis , Pageable pageable) {
 
-		return componenteTransistorBipolarService.findByVoltajeColecEmis(voltajeColecEmis);
+		return componenteTransistorBipolarService.findByVoltajeColecEmis(voltajeColecEmis , pageable);
 	}
 
 	// ---GET---
 	@GetMapping("/voltaje-colec-base/{voltColecBase}")
-	public List<ComponenteTransistorBipolarEntity> getByVoltajeColecBase(
-			@PathVariable("voltColecBase") String voltajeColecBase) {
+	public Page<ComponenteTransistorBipolarEntity> getByVoltajeColecBase(
+			@PathVariable("voltColecBase") String voltajeColecBase , Pageable pageable) {
 
-		return componenteTransistorBipolarService.findByVoltajeColecBase(voltajeColecBase);
+		return componenteTransistorBipolarService.findByVoltajeColecBase(voltajeColecBase , pageable);
 	}
 
 	// ---GET---
 	@GetMapping("/voltaje-emis-base/{voltEmisBase}")
-	public List<ComponenteTransistorBipolarEntity> getByVoltajeEmisBase(
-			@PathVariable("voltColecEmis") String voltajeEmisBase) {
+	public Page<ComponenteTransistorBipolarEntity> getByVoltajeEmisBase(
+			@PathVariable("voltColecEmis") String voltajeEmisBase , Pageable pageable) {
 
-		return componenteTransistorBipolarService.findByVoltajeEmisBase(voltajeEmisBase);
+		return componenteTransistorBipolarService.findByVoltajeEmisBase(voltajeEmisBase , pageable);
 	}
 
 	// ---GET---
 	@GetMapping("/voltaje-colec-emis-sat/{voltColecEmisSat}")
-	public List<ComponenteTransistorBipolarEntity> getByVoltajeColecEmisSat(
-			@PathVariable("voltColecEmis") String voltajeColecEmisSat) {
+	public Page<ComponenteTransistorBipolarEntity> getByVoltajeColecEmisSat(
+			@PathVariable("voltColecEmis") String voltajeColecEmisSat , Pageable pageable) {
 
-		return componenteTransistorBipolarService.findByVoltajeColecEmisSat(voltajeColecEmisSat);
+		return componenteTransistorBipolarService.findByVoltajeColecEmisSat(voltajeColecEmisSat , pageable);
 	}
 
 	// ---GET---
 	@GetMapping("/corriente-colec/{corColec}")
-	public List<ComponenteTransistorBipolarEntity> getByCorrienteColec(
-			@PathVariable("corColec") String corrienteColec) {
+	public Page<ComponenteTransistorBipolarEntity> getByCorrienteColec(
+			@PathVariable("corColec") String corrienteColec , Pageable pageable) {
 
-		return componenteTransistorBipolarService.findByCorrienteColec(corrienteColec);
+		return componenteTransistorBipolarService.findByCorrienteColec(corrienteColec , pageable);
 	}
 
 	// ---GET---
 	@GetMapping("/ganancia-hfe/{gananciaHfe}")
-	public List<ComponenteTransistorBipolarEntity> getByGananciaHfe(
-			@PathVariable("gananciaHfe") String gananciaHfe) {
+	public Page<ComponenteTransistorBipolarEntity> getByGananciaHfe(
+			@PathVariable("gananciaHfe") String gananciaHfe , Pageable pageable) {
 
-		return componenteTransistorBipolarService.findByGananciaHfe(gananciaHfe);
+		return componenteTransistorBipolarService.findByGananciaHfe(gananciaHfe , pageable);
 	}
 	// ---GET---
 	@GetMapping("/disip-max/{disipMax}")
-	public List<ComponenteTransistorBipolarEntity> getByDisipMax(
-			@PathVariable("disipMax") String disipMax) {
+	public Page<ComponenteTransistorBipolarEntity> getByDisipMax(
+			@PathVariable("disipMax") String disipMax , Pageable pageable) {
 
-		return componenteTransistorBipolarService.findByDisipMax(disipMax);
+		return componenteTransistorBipolarService.findByDisipMax(disipMax , pageable);
 	}
 
 	// ---GET---
 	@GetMapping("/temp-juntura/{tempJuntura}")
-	public List<ComponenteTransistorBipolarEntity> getByTempJuntura(
-			@PathVariable("tempJuntura") String tempJuntura) {
+	public Page<ComponenteTransistorBipolarEntity> getByTempJuntura(
+			@PathVariable("tempJuntura") String tempJuntura , Pageable pageable) {
 
-		return componenteTransistorBipolarService.findByTempJuntura(tempJuntura);
+		return componenteTransistorBipolarService.findByTempJuntura(tempJuntura , pageable);
 	}
 
 	
