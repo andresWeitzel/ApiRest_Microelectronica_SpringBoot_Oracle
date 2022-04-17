@@ -67,9 +67,7 @@
 * RequestBody
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/deleteComp.png)
  
- * Response
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/deleteServer.png)
- 
+
  *  getById..
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/getByIdAfterDelete.png)
  
@@ -1842,10 +1840,7 @@ public class ComponenteController {
 
 * En el RequestBody seteamos el id que deseamos eliminar..
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/deleteComp.png)
- 
- * También podemos ver como reporta el server(para todo método desarrollado, tanto crud como de búsqueda)..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/deleteServer.png)
- 
+
  * Podemos buscar el objeto eliminado según su ID con el getById..
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/getByIdAfterDelete.png)
  
