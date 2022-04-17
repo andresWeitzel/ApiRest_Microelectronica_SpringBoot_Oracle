@@ -19,10 +19,7 @@
  * Listado Completo de Componentes desde el Nagevador
   ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/uri_navegador/listado-componentes.png)
  
- 
-  * Listado Paginado de Componentes 
-  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/listado_componentes.png)
-  
+
   * Listado Paginado de Componentes 
   ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/listado_componentes.png)
  
