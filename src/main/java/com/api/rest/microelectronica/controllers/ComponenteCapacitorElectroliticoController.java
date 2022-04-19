@@ -1,7 +1,5 @@
 package com.api.rest.microelectronica.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -52,9 +50,9 @@ public class ComponenteCapacitorElectroliticoController {
 	// ---GET---
 	// --- LISTADO PAGINADO Y COMPLETO ---
 	@GetMapping("/listado")
-	public List<ComponenteCapacitorElectroliticoEntity> getAll(Pageable pageable) {
+	public Page<ComponenteCapacitorElectroliticoEntity> getAll(Pageable pageable) {
 
-		return componenteCapacitorElectroliticoService.getAllCapacitorElectrolitico(pageable);
+		return componenteCapacitorElectroliticoService.getAll(pageable);
 	}
 
 

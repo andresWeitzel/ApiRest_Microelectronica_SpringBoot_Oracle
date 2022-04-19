@@ -1,6 +1,6 @@
 package com.api.rest.microelectronica.controllers;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -51,7 +51,7 @@ public class ComponenteTransistorBipolarController {
 	// ---GET---
 	// --- LISTADO PAGINADO Y COMPLETO ---
 	@GetMapping("/listado")
-	public List<ComponenteTransistorBipolarEntity> getAll(Pageable pageable) {
+	public Page<ComponenteTransistorBipolarEntity> getAll(Pageable pageable) {
 
 		return componenteTransistorBipolarService.getAllComponente(pageable);
 	}

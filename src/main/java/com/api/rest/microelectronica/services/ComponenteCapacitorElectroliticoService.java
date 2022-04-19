@@ -1,6 +1,6 @@
 package com.api.rest.microelectronica.services;
 
-import java.util.List;
+
 
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
 import com.api.rest.microelectronica.entities.ComponenteCapacitorElectroliticoEntity;
 import com.api.rest.microelectronica.exceptions.capacitor.electrolitico.CapacitorElectroliticoIdMismatchException;
 import com.api.rest.microelectronica.exceptions.capacitor.electrolitico.CapacitorElectroliticoNotFoundException;
-import com.api.rest.microelectronica.exceptions.componentes.detalles.ComponenteDetalleIdMismatchException;
-import com.api.rest.microelectronica.exceptions.componentes.detalles.ComponenteDetalleNotFoundException;
 import com.api.rest.microelectronica.repositories.I_ComponenteCapacitorElectroliticoRepository;
 
 @Service
@@ -96,9 +94,9 @@ public class ComponenteCapacitorElectroliticoService {
 	// ===================
 
 	// ------- LISTADO PAGINADO ---------
-	public List<ComponenteCapacitorElectroliticoEntity> getAllCapacitorElectrolitico(Pageable pageable) {
+	public Page<ComponenteCapacitorElectroliticoEntity> getAll(Pageable pageable) {
 
-		return iCapacitorElectroliticoRepository.findAll(pageable).getContent();
+		return iCapacitorElectroliticoRepository.findAll(pageable);
 	}
 
 	// =============== MÉTODOS DE BUSQUEDA ====================

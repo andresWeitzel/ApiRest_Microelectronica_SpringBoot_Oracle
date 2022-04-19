@@ -1,6 +1,6 @@
 package com.api.rest.microelectronica.services;
 
-import java.util.List;
+
 
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,18 +75,12 @@ public class ComponenteTransistorBipolarService {
 		}
 	}
 
-	// ------ SELECT --------
-	//------- LISTADO COMPLETO ---------
-	public List<ComponenteTransistorBipolarEntity> getAllComponente() {
-
-		return iTransistorBipolarRepository.findAll();
-	}
 
 	// ------ SELECT --------
 	//------- LISTADO PAGINADO ---------
-	public List<ComponenteTransistorBipolarEntity> getAllComponente(Pageable pageable) {
+	public Page<ComponenteTransistorBipolarEntity> getAllComponente(Pageable pageable) {
 
-		return iTransistorBipolarRepository.findAll(pageable).getContent();
+		return iTransistorBipolarRepository.findAll(pageable);
 	}
 
 	// =============== MÉTODOS DE BUSQUEDA ====================
