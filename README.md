@@ -1,8 +1,8 @@
 # ApiRest_Microelectronica_SpringBoot_Oracle
 
 * Api Restful para la Aplicación Web de Microelectrónica AppGestionMicroelectronica_SpringBoot (https://github.com/andresWeitzel/AppGestionMicroelectronica_SpringBoot)
-* La Misma consta de todas las Operaciones CRUD , Búsquedas independientes de tipo Like , todos los objetos de tipo getBy se manipulan como paginados, salvo los getById que se requiere un response por objeto, Se Desarrollan Clases Específicas para el Manejo de Excepciones para cada Servicio Completo , Todas las funcionalidades tienen generación de logs en el Server para los errores y excepciones, documentación completa de la Api con open-api para la visualización con swagger, las anotaciones de open-api se aplican junto con los códigos de respuesta de tipo HTTP para cada función en los controllers
-* Se pone a disposición todos los recursos anteriores para Componentes, Componentes Detalles y Capacitores Electrolíticos . 
+* La Misma consta de todas las Operaciones CRUD , Búsquedas independientes de tipo Like , todos los objetos de tipo getBy se manipulan como paginados, salvo los getById que se requiere un response por objeto, Se Desarrollan Clases Específicas para el Manejo de Excepciones para cada Servicio Completo , Todas las funcionalidades tienen generación de logs en el Server para los errores y excepciones personalizadas, documentación completa de la Api con open-api para la visualización con swagger, las anotaciones de open-api se aplican junto con los códigos de respuesta de tipo HTTP para cada función en los controllers
+* Se pone a disposición todos los recursos anteriores SÓLO para Componentes y Componentes Detalles . 
 * Repositorio de la Base de Datos de la Api : https://github.com/andresWeitzel/db_microelectronica_Oracle
 
 </br>
@@ -152,7 +152,7 @@
 <hr>
 
 ## ` Documentación y Guía del Proyecto `
-#### (Esta Documentación que Desarrollé es para la Creación y Configuración del Proyecto, Manejo y Dependencias de Maven, Spring Tool Suite, Spring Booot, Hibernate-JPA, Oracle, Thymeleaf,  Servidor de Despliegue y otros usos. Recomiendo Leerla y Realizar todo paso a paso como se indica en la misma).
+#### (Esta Documentación que Desarrollé es para la Creación y Configuración de la API, Manejo y Dependencias de Maven, Spring Tool Suite, Spring Booot, Hibernate-JPA, Oracle, Open-Api, Swagger UI y otros usos. Recomiendo Leerla y Realizar todo paso a paso como se indica en la misma).
 
 </br>
 
