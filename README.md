@@ -1,9 +1,26 @@
 # ApiRest_Microelectronica_SpringBoot_Oracle
 
-* Api Restful para la Aplicación Web de Microelectrónica AppGestionMicroelectronica_SpringBoot (https://github.com/andresWeitzel/AppGestionMicroelectronica_SpringBoot)
-* La Misma consta de todas las Operaciones CRUD , Búsquedas independientes de tipo Like , todos los objetos de tipo getBy se manipulan como paginados, salvo los getById que se requiere un response por objeto, Se Desarrollan Clases Específicas para el Manejo de Excepciones para cada Servicio Completo , Todas las funcionalidades tienen generación de logs en el Server para los errores y excepciones personalizadas, documentación completa de la Api con open-api para la visualización con swagger, las anotaciones de open-api se aplican junto con los códigos de respuesta de tipo HTTP para cada función en los controllers
+* Api Restful para la gestión de Componentes de Microelectrónica.
+* A raíz de esta api ha surgido el desarrollo de una aplicación web para gestionar dichos productos. Repositorio : https://github.com/andresWeitzel/AppGestionMicroelectronica_SpringBoot.
+* Esta Api Restful consta de todas las Operaciones CRUD , Búsquedas independientes de tipo like , paginaciones, búsquedas con filtro, todos los objetos de tipo getBy se manipulan como paginados, salvo los getById que se requiere un response por objeto. Se Desarrollan Clases Específicas para el Manejo de Excepciones para cada Servicio Completo , todas las funcionalidades tienen generación de logs en el Server para los errores y excepciones personalizadas, documentación completa de la Api con open-apiV3.0 para la visualización con swagger-UI, las anotaciones de dicha doc se aplican junto con los códigos de respuesta de tipo HTTP para cada función en los controllers.
 * Se pone a disposición todos los recursos anteriores SÓLO para Componentes y Componentes Detalles . 
+
+</br>
+
 * Repositorio de la Base de Datos de la Api : https://github.com/andresWeitzel/db_microelectronica_Oracle
+* PlayList del Proyecto : https://www.youtube.com/playlist?list=PLCl11UFjHurAmc1wYGmkSdOOYyeo_6Ekj
+
+</br>
+
+### EndPoints y Recursos. Vista Swagger UI
+
+### EndPoints
+* http://localhost:8096/swagger-ui/index.html#/componente-controller
+* http://localhost:8096/swagger-ui/index.html#/componente-detalle-controller
+* http://localhost:8096/swagger-ui/index.html#/componente-transistor-bipolar-controller
+* http://localhost:8096/swagger-ui/index.html#/componente-capacitor-electrolitico-controller
+
+* Los recursos de cada endpoint se muestran en las siguientes imágenes respectivas a cada controller
 
 </br>
 
