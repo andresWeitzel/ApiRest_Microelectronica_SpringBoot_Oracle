@@ -1646,14 +1646,14 @@ public class ComponenteController {
 * Primeramente deberíamos visualizar todos los controllers desarrollados en swagger y documentados.
 * Controllers..
 
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/controllers.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/controllers.png)
 
 </br> 
 
 * Si desplegamos nuestro controller componentes podremos visualizar la doc desarrollada
 * Controllers..
 
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/controllers.png))
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/controllers.png))
 
 </br> 
 
@@ -1849,11 +1849,11 @@ public class ComponenteController {
   
 * Listado en Swagger
 
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/listado_componentes.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/listado_componentes.png)
 
 * Listado desde el navegador
 
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/uri_navegador/listado-componentes.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/uri_navegador/listado-componentes.png)
 
 </br> 
 
@@ -1924,10 +1924,10 @@ public class ComponenteController {
   
   
    * Podemos Filtrar pidiendo los componentes que tengan una A y ordenamos por su id..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/getByNroPiezaLike.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/getByNroPiezaLike.png)
  
  * Obtenemos..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/getByNroPiezaLike.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/getByNroPiezaLike.png)
  
 </br> 
 
@@ -1935,16 +1935,16 @@ public class ComponenteController {
 #### 22.3) Método POST / Agregar un Componente
 
 * En el RequestBody seteamos los valores de los campos del componente que deseamos agregar a la db..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/post/postComponente.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/postComponente.png)
  
  * Obtenemos un Response con el estado 200, componente agregado correctamente..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/post/postComponenteResponse.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/postComponenteResponse.png)
  
  * Si Búscamos el Componente según su descripción..
-![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/post/getByDescripcionAfterPost.png)
+![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/getByDescripcionAfterPost.png)
  
  * Obtenemos como response.
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/post/getByDescripcionResponseAfterPost.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/getByDescripcionResponseAfterPost.png)
  
  
  </br> 
@@ -1953,16 +1953,16 @@ public class ComponenteController {
 #### 22.4) Método PUT / Actualizar un Componente
 
 * En el RequestBody seteamos los valores de los campos del componente que deseamos actualizar..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/put/put.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/put.png)
  
  * Obtenemos un Response con el estado 200, componente actualizado correctamente..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/put/putResponse.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/putResponse.png)
  
  * Si Búscamos el Componente según su fabricante..
-![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/put/getByFabricanteAfterPut.png)
+![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteAfterPut.png)
  
  * Obtenemos como response.
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/put/getByFabricanteResponseAfterPut.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteResponseAfterPut.png)
  
  
   
@@ -1972,13 +1972,13 @@ public class ComponenteController {
 #### 22.5) Método DELETE / Eliminar un Componente según su id
 
 * En el RequestBody seteamos el id que deseamos eliminar..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/deleteComp.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/deleteComp.png)
 
  * Podemos buscar el objeto eliminado según su ID con el getById..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/getByIdAfterDelete.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDelete.png)
  
  * Si Visualizamos el reporte desde el lado del server..
-![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/getByIdAfterDeleteServerMsj.jpg)
+![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDeleteServerMsj.jpg)
  
  </br>
 
