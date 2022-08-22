@@ -41,7 +41,12 @@ public interface I_ComponenteDetalleRepository extends JpaRepository<ComponenteD
 		@Query("select c from ComponenteDetalleEntity c where c.voltajeMaxEntrada like %:voltajeMaxEntrada%")
 		public abstract Page<ComponenteDetalleEntity> findByVoltajeMaxEntrada(String voltajeMaxEntrada, Pageable pageable);
 	
-		public abstract Page<ComponenteDetalleEntity> findAll(Pageable pageable);
+		public abstract Page<ComponenteDetalleEntity> findAll(Pageable pageable );
+
+		@Query("select c from ComponenteDetalleEntity c where concat(lower(c.id), lower(c.hojaDeDatos), lower(c.longitud)"
+				+ ", lower(c.ancho), lower(c.peso), lower(c.material), lower(c.voltajeRecomendado), lower(c.voltajeMinEntrada)"
+				+ ", lower(c.voltajeMaxEntrada)) like lower(concat ( '%', ?1 , '%'))")
+		public abstract Page<ComponenteDetalleEntity> findAll(String filtro, Pageable pageable);
 		
 	
 }

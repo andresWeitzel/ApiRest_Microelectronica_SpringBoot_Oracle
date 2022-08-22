@@ -23,41 +23,30 @@ public class ComponenteEntity {
 	@SequenceGenerator(name = "seq_comp", sequenceName = "id_seq_comp", allocationSize = 1)
 	@Id
 	@Column(name = "id")
-
 	private int id;
 
 	@Column(name = "codigo")
-
 	private String codigo;
 
 	@Column(name = "imagen")
-
 	private String imagen;
 
 	@Column(name = "nro_pieza")
-
 	private String nroPieza;
 
 	@Column(name = "categoria")
-
 	private String categoria;
 
 	@Column(name = "descripcion")
-
 	private String descripcion;
 
 	@Column(name = "fabricante")
-
 	private String fabricante;
 
 	@Column(name = "stock")
-
 	private int stock;
 
 	@Column(name = "precio")
-
 	private double precio;
-
-
 
 }

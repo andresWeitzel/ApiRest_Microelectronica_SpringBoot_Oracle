@@ -116,6 +116,25 @@ public class ComponenteDetalleService {
 					e);
 		}
 	}
+	
+	// ==========================
+	// ===== GET ALL FILTER =====
+	// ==========================
+
+	// ------- LISTADO PAGINADO ---------
+	public Page<ComponenteDetalleEntity> getAllFilterComponenteDetalle(String filter, Pageable pageable) {
+
+		try {
+			return iComponenteDetalleRepository.findAll(filter, pageable);
+		} catch (Exception e) {
+
+			logger.error(
+					"ERROR getAllFilterComponenteDetalle : NO SE HAN LISTADO LOS DETALLES DE LOS COMPONENTES FILTRADOS. CAUSADO POR "
+							+ e);
+			throw new ComponenteDetalleNotFoundException("NO SE PUDO ENCONTRAR EL LISTADO DE DETALLES DE COMPONENTES FILTRADOS",
+					e);
+		}
+	}
 
 	// =============== MÉTODOS DE BUSQUEDA ====================
 

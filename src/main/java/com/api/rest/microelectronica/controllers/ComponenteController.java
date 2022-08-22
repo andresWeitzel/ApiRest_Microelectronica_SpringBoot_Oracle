@@ -1,9 +1,9 @@
 package com.api.rest.microelectronica.controllers;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +23,7 @@ import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("/v1/componentes")
+@CrossOrigin(origins = "*")
 public class ComponenteController {
 
 	@Autowired
@@ -39,13 +40,17 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Insertado el Componente Correctamente", content = {
 					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "201", description = "Se ha Insertado el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
 			@ApiResponse(responseCode = "400", description = "No se pudo Insertar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para Insertar el Componente. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido insertar el componente. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Inserción del Componente no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@PostMapping("/")
 	public void addComponente(@RequestBody ComponenteEntity componente) {
 
-		 componenteService.addComponente(componente);
+		componenteService.addComponente(componente);
 	}
 
 	// ================
@@ -55,13 +60,17 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Actualizado el Componente Correctamente", content = {
 					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "201", description = "Se ha Actualizado el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
 			@ApiResponse(responseCode = "400", description = "No se pudo Actualizar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para Actualizar el Componente. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido Actualizar el componente. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Actualización del Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@PutMapping("/")
 	public void updateComponente(@RequestBody ComponenteEntity componente) {
 
-		 componenteService.updateComponente(componente);
+		componenteService.updateComponente(componente);
 	}
 
 	// ==================
@@ -71,13 +80,17 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Eliminado el Componente Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudo Eliminar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se ha Eliminado el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Eliminado el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para Eliminar el Componente. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido Eliminado el componente. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Eliminación del Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@DeleteMapping("/{id}")
 	public void deleteComponente(@PathVariable("id") int id) {
 
-		 componenteService.deleteComponente(id);
+		componenteService.deleteComponente(id);
 	}
 
 	// ===============
@@ -88,13 +101,38 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Traído el Listado de Componentes", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudo traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se ha Traído el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido encontrar el listado de componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "El Listado de Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/listado")
 	public Page<ComponenteEntity> getAll(Pageable pageable) {
 
 		return componenteService.getAllComponente(pageable);
+	}
+	
+	// ===============
+	// ===== GET =====
+	// ===============
+	// ---LISTADO PAGINADO Y COMPLETO CON FILTRO---
+	@Operation(summary = "Listado Paginado de Componentes con Filtro")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se ha Traído el Listado de Componentes con Filtro", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "201", description = "Se ha Traído el Componente con Filtro Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes con Filtro. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes con Filtro. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido encontrar el listado de componentes con Filtro. El servidor ha denegado esta operación", content = @Content),
+			@ApiResponse(responseCode = "404", description = "El Listado de Componentes con Filtro no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
+	@GetMapping("/listado-filtro")
+	public Page<ComponenteEntity> getAllFilter(String filter, Pageable pageable) {
+
+		return componenteService.getAllFilterComponente(filter, pageable);
 	}
 
 	// ==================================================
@@ -108,7 +146,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Traído el Componente Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudo Encontrar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se ha Traído el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido encontrar el componente. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda del Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/id/{id}")
@@ -124,7 +166,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/codigo/{codigo}")
@@ -140,7 +186,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/imagen/{imagen}")
@@ -156,7 +206,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/nro-de-pieza/{nroPieza}")
@@ -172,13 +226,17 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/categoria/{categoria}")
-	public Page<ComponenteEntity> getByCategoria(@PathVariable("nroPieza") String nroPieza, Pageable pageable) {
+	public Page<ComponenteEntity> getByCategoria(@PathVariable("categoria") String categoria, Pageable pageable) {
 
-		return componenteService.findByNroPieza(nroPieza, pageable);
+		return componenteService.findByCategoria(categoria, pageable);
 	}
 
 	// ===============
@@ -188,7 +246,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/descripcion/{descripcion}")
@@ -204,7 +266,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/fabricante/{fabricante}")
@@ -220,7 +286,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/stock/{stock}")
@@ -236,7 +306,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/precio/{precio}")
