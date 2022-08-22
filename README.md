@@ -7,12 +7,12 @@
 
 </br>
 
-* Repositorio de la Base de Datos de la Api : https://github.com/andresWeitzel/db_microelectronica_Oracle
-* PlayList del Proyecto : https://www.youtube.com/playlist?list=PLCl11UFjHurAmc1wYGmkSdOOYyeo_6Ekj
+* Repositorio de la Base de Datos de la Api : https://github.com/andresWeitzel/db_microelectronica_Oracle.
+* PlayList del Proyecto : https://www.youtube.com/playlist?list=PLCl11UFjHurAmc1wYGmkSdOOYyeo_6Ekj.
 
 </br>
 
-### EndPoints y Recursos. Vista Swagger UI
+### EndPoints y Recursos. Vista Swagger UI.
 
 ### EndPoints
 * http://localhost:8096/swagger-ui/index.html#/componente-controller
@@ -20,17 +20,17 @@
 * http://localhost:8096/swagger-ui/index.html#/componente-transistor-bipolar-controller
 * http://localhost:8096/swagger-ui/index.html#/componente-capacitor-electrolitico-controller
 
-* Los recursos de cada endpoint se muestran en las siguientes imágenes respectivas a cada controller
+* Los recursos de cada endpoint se muestran en las siguientes imágenes respectivas a cada controller.
 
 </br>
 
-* Controllers 
+* Controllers .
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/controllers.png)
  
- * Documentación ComponenteController 
+ * Documentación ComponenteController.
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/doc-componente_controller.png)
  
- #### Se detalla las Operaciones CRUD a modo de ejemplificación del Controller Componentes
+ #### Se detalla las Operaciones CRUD a modo de ejemplificación del Controller Componentes.
  #### Método GET / Listado de Componentes
  
  * Listado Completo de Componentes desde el Nagevador
@@ -59,7 +59,7 @@
  </br> 
 
 
-#### Método PUT / Actualizar un Componente
+#### Método PUT / Actualizar un Componente.
 
 * RequestBody
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/put.png)
@@ -115,7 +115,7 @@
 
 </br>
 
-### Descarga y Documentacion de las Tecnologías Implementadas
+### Descarga y Documentacion de las Tecnologías Implementadas.
 
 | **Tecnología**  | **Descarga** | **Documentación** |               
 | ------------- | ------------- | ------------- |
@@ -130,7 +130,7 @@
 
 </br>
 
-### Patrones de Diseño Implementados
+### Patrones de Diseño Implementados.
 
 | **Patrón de Diseño** | **Finalidad** |               
 | ------------- | ------------- |
@@ -156,7 +156,7 @@
 
 </br>
 
-### Documentación No Oficial Recomendada
+### Documentación No Oficial Recomendada.
 
 * Config open-api y Swagger: https://www.baeldung.com/spring-rest-openapi-documentation
 * Tutorial doc open-api : https://www.youtube.com/watch?v=iaVBleTf88U
@@ -173,7 +173,7 @@
 
 </br>
 
-## Indice
+## Indice.
 
 #### Sección 1) Creación y Configuraciones del Proyecto 
    
@@ -226,7 +226,7 @@
    - [Paso 15) Creación y Configuración del Service ComponenteDetalleService](#paso-15-creación-y-configuración-del-service-componentedetalleservice) 
 
    - [Paso 16) Creación y Configuración del Service ComponenteCapacitorElectroliticoService](#paso-16-creación-y-configuración-del-service-componentecapacitorelectroliticoservice) 
-   - 
+
    - [Paso 17) Creación y Configuración del Service ComponenteTransistorBipolarService](#paso-17-creación-y-configuración-del-service-componentetransistorbipolarservice) 
 
 
@@ -263,6 +263,7 @@
    - [Paso 26) Descarga y Configuración de Git](#paso-26-descarga-y-configuración-de-git)
 
    - [Paso 27) Subir el proyecto al repositorio de github desde la consola de git](#paso-27-subir-el-proyecto-al-repositorio-de-github-desde-la-consola-de-git)
+   
    - [Paso 28) Actualización del repositorio del proyecto desde la consola de GIT](#paso-28-actualización-del-repositorio-del-proyecto-desde-la-consola-de-GIT)
 
 
@@ -362,7 +363,7 @@
 
 
 
-### Paso 3) Listado de Dependencias
+### Paso 3) Listado de Dependencias.
 #### (Las siguientes dependencias del Proyecto deberán estar en el pom.xml para el correcto funcionamiento del Proyecto. Puede ocurrir que haya más dependencias que las mencionadas, por defecto spring proporciona las generales, el resto las buscamos desde Maven Repositories).
 
 
@@ -463,7 +464,7 @@
 </br>
 
 
-### Paso 4) Descarga de `Lombok`
+### Paso 4) Descarga de `Lombok`.
 * Seguidamente de tener el jars a través de la dependencia en nuestro proyecto, vamos a instalar lombok para poder utilizarlo, no basta con la descarga, hay que realizar la configuración y descarga del mismo en nuestro ordenador.
 * Buscamos el jar en Maven Dependencies `lombok-1.18....` Click derecho y properties
 * Pestaña Java Source Attachment y buscamos el Path donde se descargo el jar de lombok.
@@ -478,7 +479,7 @@
 
 
 
-### Paso 5) Configuraciones del `application.properties`
+### Paso 5) Configuraciones del `application.properties`.
 #### (Vamos a utilizar el esquema de conexión de nuestra db ya creado en otro repositorio acerca de productos de microelectronica, las dudas referentes a la misma se encuentra en su respectivo repositorio....https://github.com/andresWeitzel/db_microelectronica_Oracle)
 
 </br>
