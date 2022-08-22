@@ -24,53 +24,52 @@
 
 </br>
 
-* Controllers .
+### Controllers .
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/controllers.png)
  
- * Documentación ComponenteController.
+ ### Documentación ComponenteController.
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/doc-componente_controller.png)
  
- #### Se detalla las Operaciones CRUD a modo de ejemplificación del Controller Componentes.
- #### Método GET / Listado de Componentes
- 
- * Listado Completo de Componentes desde el Nagevador
+ ### Se detalla las Operaciones CRUD a modo de ejemplificación del Controller Componentes.
+ ### Método GET / Listado de Componentes
+#### Listado Completo de Componentes desde el Nagevador
   ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/uri_navegador/listado-componentes.png)
  
 
-  * Listado Paginado de Componentes 
+ #### Listado Paginado de Componentes 
   ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/listado_componentes.png)
  
 
-#### Método POST / Agregar un Componente
+### Método POST / Agregar un Componente
 
-* RequestBody
+#### RequestBody
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/postComponente.png)
  
- * Response
+ #### Response
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/postComponenteResponse.png)
  
- * getByDescripcion
+ #### getByDescripcion
 ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/getByDescripcionAfterPost.png)
  
-*  Response
+####  Response
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/getByDescripcionResponseAfterPost.png)
  
  
  </br> 
 
 
-#### Método PUT / Actualizar un Componente.
+### Método PUT / Actualizar un Componente.
 
-* RequestBody
+#### RequestBody
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/put.png)
  
- * Response
+#### Response
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/putResponse.png)
  
- * getByFabricante
+#### getByFabricante
 ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteAfterPut.png)
  
- * Response
+#### Response
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteResponseAfterPut.png)
  
 
@@ -79,16 +78,16 @@
  </br> 
 
 
-#### Método DELETE / Eliminar un Componente según su id
+### Método DELETE / Eliminar un Componente según su id
 
-* RequestBody
+#### RequestBody
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/deleteComp.png)
  
 
- *  getById..
+#### getById..
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDelete.png)
  
- * Response lado del server..
+#### Response lado del server..
 ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDeleteServerMsj.jpg)
  
  
