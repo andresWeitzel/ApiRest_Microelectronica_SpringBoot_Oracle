@@ -30,7 +30,9 @@
  ### Documentación ComponenteController.
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/doc-componente_controller.png)
  
- ### Se detalla las Operaciones CRUD a modo de ejemplificación del Controller Componentes.
+ </br>
+ 
+ ### Operaciones CRUD.
  ### Método GET / Listado de Componentes
 #### Listado Completo de Componentes desde el Nagevador
   ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/uri_navegador/listado-componentes.png)
