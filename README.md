@@ -25,35 +25,35 @@
 </br>
 
 * Controllers 
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/controllers.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/controllers.png)
  
  * Documentación ComponenteController 
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/doc-componente_controller.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/doc-componente_controller.png)
  
  #### Se detalla las Operaciones CRUD a modo de ejemplificación del Controller Componentes
  #### Método GET / Listado de Componentes
  
  * Listado Completo de Componentes desde el Nagevador
-  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/uri_navegador/listado-componentes.png)
+  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/uri_navegador/listado-componentes.png)
  
 
   * Listado Paginado de Componentes 
-  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/listado_componentes.png)
+  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/listado_componentes.png)
  
 
 #### Método POST / Agregar un Componente
 
 * RequestBody
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/post/postComponente.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/postComponente.png)
  
  * Response
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/post/postComponenteResponse.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/postComponenteResponse.png)
  
  * getByDescripcion
-![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/post/getByDescripcionAfterPost.png)
+![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/getByDescripcionAfterPost.png)
  
 *  Response
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/post/getByDescripcionResponseAfterPost.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/getByDescripcionResponseAfterPost.png)
  
  
  </br> 
@@ -62,16 +62,16 @@
 #### Método PUT / Actualizar un Componente
 
 * RequestBody
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/put/put.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/put.png)
  
  * Response
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/put/putResponse.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/putResponse.png)
  
  * getByFabricante
-![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/put/getByFabricanteAfterPut.png)
+![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteAfterPut.png)
  
  * Response
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/put/getByFabricanteResponseAfterPut.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteResponseAfterPut.png)
  
 
 
@@ -82,14 +82,14 @@
 #### Método DELETE / Eliminar un Componente según su id
 
 * RequestBody
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/deleteComp.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/deleteComp.png)
  
 
  *  getById..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/getByIdAfterDelete.png)
+ ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDelete.png)
  
  * Response lado del server..
-![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/documentation/swagger/doc_openapi_componenteController/delete/getByIdAfterDeleteServerMsj.jpg)
+![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDeleteServerMsj.jpg)
  
  
 </br>
@@ -499,22 +499,32 @@ spring.datasource.username=admin_microelectronica
 spring.datasource.password=admin_microelectronica
 spring.jpa.database=oracle
 ```
-* Además del dialect para las configuraciones del sgdb Oracle
+* Además del dialect todas las config para trabajar con spring-data-jpa
 ```xml
+spring.jpa.show-sql = true
+spring.jpa.hibernate.ddl-auto = update
+spring.jpa.hibernate.naming.strategy = org.hibernate.cfg.ImprovedNamingStrategy
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.Oracle12cDialect
 
 ```
 * Para Trabajar con open-api y swagger ui vamos a configurar la ruta de la vista de swagger entre otros
  ```xml
-
 #---CONFIG OPEN-UI -----
 springdoc.api-docs.path=/api-docs
 
 #---CONFIG SWAGGER -----
 springdoc.swagger-ui.path=/swagger-ui-custom.html
 springdoc.swagger-ui.operationsSorter=method
-
 ```
+* Para manejar las configs de las paginaciones
+ ```xml
+#---CONFIG PAGINATION---
+spring.data.rest.page-param-name=page
+spring.data.rest.sort-param-name=sort
+spring.data.rest.limit-param-name=limit
+spring.data.rest.default-page-size = 10
+```
+
 * xml completo..
  ```xml
 
@@ -528,7 +538,7 @@ spring.datasource.username=admin_microelectronica
 spring.datasource.password=admin_microelectronica
 spring.jpa.database=oracle
 
-#---CONFIG HIBERNATE-JPA---
+#---CONFIG SPRING-JPA---
 spring.jpa.show-sql = true
 spring.jpa.hibernate.ddl-auto = update
 spring.jpa.hibernate.naming.strategy = org.hibernate.cfg.ImprovedNamingStrategy
@@ -725,14 +735,19 @@ public interface I_ComponenteRepository extends JpaRepository<ComponenteEntity, 
 		
 		@Query("select c from ComponenteEntity c where c.codigo like %:codigo%")
 		public abstract Page<ComponenteEntity> findByCodigo(String codigo, Pageable pageable);
+		
 		@Query("select c from ComponenteEntity c where c.imagen like %:imagen%")
 		public abstract Page<ComponenteEntity> findByImagen(String imagen, Pageable pageable);
+		
 		@Query("select c from ComponenteEntity c where c.nroPieza like %:nroPieza%")
 		public abstract Page<ComponenteEntity> findByNroPieza(String nroPieza, Pageable pageable);
+		
 		@Query("select c from ComponenteEntity c where c.categoria like %:categoria%")
 		public abstract Page<ComponenteEntity> findByCategoria(String categoria, Pageable pageable);
+		
 		@Query("select c from ComponenteEntity c where c.descripcion like %:descripcion%")
 		public abstract Page<ComponenteEntity> findByDescripcion(String descripcion , Pageable pageable);
+		
 		@Query("select c from ComponenteEntity c where c.fabricante like %:fabricante%")
 		public abstract Page<ComponenteEntity> findByFabricante(String fabricante , Pageable pageable);
 		
@@ -742,10 +757,16 @@ public interface I_ComponenteRepository extends JpaRepository<ComponenteEntity, 
 
 		public abstract Page<ComponenteEntity> findAll(Pageable pageable );
 
+		@Query("select c from ComponenteEntity c where concat(lower(c.id), lower(c.codigo), lower(c.imagen)"
+				+ ", lower(c.nroPieza), lower(c.categoria), lower(c.descripcion), lower(c.fabricante), lower(c.stock)"
+				+ ", lower(c.precio)) like lower(concat ( '%', ?1 , '%'))")
+		public abstract Page<ComponenteEntity> findAll(String filtro, Pageable pageable);
+
 	
 	
 	
 }
+
 ```
 
 </br>
@@ -985,6 +1006,21 @@ public class ComponenteService {
 			throw new ComponenteNotFoundException("NO SE PUDO ENCONTRAR EL LISTADO DE COMPONENTES ", e);
 		} 
 	}
+	
+	// =========================
+	// ===== GET ALL FILTER =====
+	// ==========================
+	// ------- LISTADO PAGINADO CON FILTER ---------
+	public Page<ComponenteEntity> getAllFilterComponente(String filter, Pageable pageable) {
+
+		try {
+			return iComponenteRepository.findAll(filter, pageable);
+		} catch (Exception e) {
+			
+			logger.error("ERROR getAllFilterComponente : NO SE HAN LISTADO LOS COMPONENTES FILTRADOS. CAUSADO POR "+e);
+			throw new ComponenteNotFoundException("NO SE PUDO ENCONTRAR EL LISTADO DE COMPONENTES FILTRADOS ", e);
+		} 
+	}
 
 	// =============== MÉTODOS DE BUSQUEDA ====================
 
@@ -1217,21 +1253,27 @@ public class ComponenteService {
 * Todos los Métodos, CRUD y de Búsqueda, devolveran tipos de estados http diferentes según sea el response del server. Además documentamos dichos métodos con las anotations de open-api para su documentación y visualización en Swagger UI.
 * Ej de documentación para un Método..
  ```java
- 	// ================
+
+	// ================
 	// ===== POST =====
 	// =================
 	@Operation(summary = "Inserción de un Componente")
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Insertado el Componente Correctamente", content = {
 					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "201", description = "Se ha Insertado el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
 			@ApiResponse(responseCode = "400", description = "No se pudo Insertar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para Insertar el Componente. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido insertar el componente. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Inserción del Componente no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@PostMapping("/")
 	public void addComponente(@RequestBody ComponenteEntity componente) {
 
-		 componenteService.addComponente(componente);
+		componenteService.addComponente(componente);
 	}
+
   ```
 * Usamos log4j para los logs de error en los métodos CRUD para la persistencia. 
 * Desarrollamos el cuerpo de cada método de la interfaz
@@ -1241,10 +1283,10 @@ public class ComponenteService {
  ```java
 package com.api.rest.microelectronica.controllers;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -1264,6 +1306,7 @@ import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("/v1/componentes")
+@CrossOrigin(origins = "*")
 public class ComponenteController {
 
 	@Autowired
@@ -1280,13 +1323,17 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Insertado el Componente Correctamente", content = {
 					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "201", description = "Se ha Insertado el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
 			@ApiResponse(responseCode = "400", description = "No se pudo Insertar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para Insertar el Componente. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido insertar el componente. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Inserción del Componente no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@PostMapping("/")
 	public void addComponente(@RequestBody ComponenteEntity componente) {
 
-		 componenteService.addComponente(componente);
+		componenteService.addComponente(componente);
 	}
 
 	// ================
@@ -1296,13 +1343,17 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Actualizado el Componente Correctamente", content = {
 					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "201", description = "Se ha Actualizado el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
 			@ApiResponse(responseCode = "400", description = "No se pudo Actualizar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para Actualizar el Componente. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido Actualizar el componente. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Actualización del Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@PutMapping("/")
 	public void updateComponente(@RequestBody ComponenteEntity componente) {
 
-		 componenteService.updateComponente(componente);
+		componenteService.updateComponente(componente);
 	}
 
 	// ==================
@@ -1312,13 +1363,17 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Eliminado el Componente Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudo Eliminar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se ha Eliminado el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Eliminado el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para Eliminar el Componente. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido Eliminado el componente. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Eliminación del Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@DeleteMapping("/{id}")
 	public void deleteComponente(@PathVariable("id") int id) {
 
-		 componenteService.deleteComponente(id);
+		componenteService.deleteComponente(id);
 	}
 
 	// ===============
@@ -1329,13 +1384,38 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Traído el Listado de Componentes", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudo traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se ha Traído el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido encontrar el listado de componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "El Listado de Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/listado")
 	public Page<ComponenteEntity> getAll(Pageable pageable) {
 
 		return componenteService.getAllComponente(pageable);
+	}
+	
+	// ===============
+	// ===== GET =====
+	// ===============
+	// ---LISTADO PAGINADO Y COMPLETO CON FILTRO---
+	@Operation(summary = "Listado Paginado de Componentes con Filtro")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se ha Traído el Listado de Componentes con Filtro", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "201", description = "Se ha Traído el Componente con Filtro Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes con Filtro. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes con Filtro. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido encontrar el listado de componentes con Filtro. El servidor ha denegado esta operación", content = @Content),
+			@ApiResponse(responseCode = "404", description = "El Listado de Componentes con Filtro no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
+	@GetMapping("/listado-filtro")
+	public Page<ComponenteEntity> getAllFilter(String filter, Pageable pageable) {
+
+		return componenteService.getAllFilterComponente(filter, pageable);
 	}
 
 	// ==================================================
@@ -1349,7 +1429,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha Traído el Componente Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudo Encontrar el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se ha Traído el Componente Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Componente. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se ha podido encontrar el componente. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda del Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/id/{id}")
@@ -1365,7 +1449,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/codigo/{codigo}")
@@ -1381,7 +1469,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componentes Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/imagen/{imagen}")
@@ -1397,7 +1489,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/nro-de-pieza/{nroPieza}")
@@ -1413,13 +1509,17 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/categoria/{categoria}")
-	public Page<ComponenteEntity> getByCategoria(@PathVariable("nroPieza") String nroPieza, Pageable pageable) {
+	public Page<ComponenteEntity> getByCategoria(@PathVariable("categoria") String categoria, Pageable pageable) {
 
-		return componenteService.findByNroPieza(nroPieza, pageable);
+		return componenteService.findByCategoria(categoria, pageable);
 	}
 
 	// ===============
@@ -1429,7 +1529,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/descripcion/{descripcion}")
@@ -1445,7 +1549,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/fabricante/{fabricante}")
@@ -1461,7 +1569,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/stock/{stock}")
@@ -1477,7 +1589,11 @@ public class ComponenteController {
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se han Traído los Componentes Correctamente", content = {
 					@Content(mediaType = "application/json") }),
-			@ApiResponse(responseCode = "400", description = "No se pudieron Encontrar los Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "201", description = "Se han Traído los Componenten Correctamente", content = {
+					@Content(mediaType = "application/json") }),
+			@ApiResponse(responseCode = "400", description = "No se pudo Traer el Listado de Componentes. Comprobar la Solicitud", content = @Content),
+			@ApiResponse(responseCode = "401", description = "No está autorizado para solicitar el Listado de Componentes. Verificar Credenciales", content = @Content),
+			@ApiResponse(responseCode = "403", description = "No se han podido encontrar los Componentes. El servidor ha denegado esta operación", content = @Content),
 			@ApiResponse(responseCode = "404", description = "La Búsqueda de los Componentes no está Disponible ya que el recurso pedido no existe. Comprobar solicitud", content = @Content),
 			@ApiResponse(responseCode = "500", description = "Se ha producido un error interno en el Servidor", content = @Content) })
 	@GetMapping("/precio/{precio}")
