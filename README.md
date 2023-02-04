@@ -60,15 +60,14 @@ Api Restful para la gestión de Componentes de Microelectrónica implementada co
  
  <br>
  
-
 * Esta Api Restful consta de todas las Operaciones CRUD , b úsquedas independientes de tipo like , paginaciones, búsquedas con filtro, todos los objetos de tipo getBy se manipulan como paginados, salvo los getById que se requiere un response por objeto. Se Desarrollan Clases Específicas para el Manejo de Excepciones para cada Servicio Completo , todas las funcionalidades tienen generación de logs en el Server para los errores y excepciones personalizadas, documentación completa de la Api con open-apiV3.0 para la visualización con swagger-UI, las anotaciones de dicha doc se aplican junto con los códigos de respuesta de tipo HTTP para cada función en los controllers.
 * Se pone a disposición todos los recursos anteriores SÓLO para Componentes y Componentes Detalles . 
 
 </br>
 
-* Repositorio de la Base de Datos de la Api : https://github.com/andresWeitzel/db_microelectronica_Oracle.
-* PlayList del Proyecto : https://www.youtube.com/playlist?list=PLCl11UFjHurAmc1wYGmkSdOOYyeo_6Ekj.
-
+* [Repositorio base de datos](https://github.com/andresWeitzel/db_microelectronica_Oracle)
+* [PlayList del Proyecto](https://www.youtube.com/playlist?list=PLCl11UFjHurAmc1wYGmkSdOOYyeo_6Ekj)
+ 
 
 <br>
 
@@ -183,10 +182,10 @@ Api Restful para la gestión de Componentes de Microelectrónica implementada co
 
 
 ### Controllers .
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/controllers.png)
+ ![Index app](./doc/swagger/controllers.png)
  
  ### Documentación ComponenteController.
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/doc-componente_controller.png)
+ ![Index app](./doc/swagger/doc_openapi_componenteController/doc-componente_controller.png)
 
 * Algunos de los recursos de cada endpoint se muestran en las siguientes imágenes.
 
@@ -199,60 +198,58 @@ Api Restful para la gestión de Componentes de Microelectrónica implementada co
 <details>
  <summary>Ver</summary>
  
- ### Operaciones CRUD.
- ### Método GET / Listado de Componentes
-#### Listado Completo de Componentes desde el Nagevador
-  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/uri_navegador/listado-componentes.png)
+###  GET - Listado de Componentes
+### Listado Completo de Componentes desde el Nagevador
+  ![Index app](./doc/uri_navegador/listado-componentes.png)
  
+### Listado Paginado de Componentes 
+  ![Index app](./doc/swagger/doc_openapi_componenteController/listado_componentes.png)
+ 
+<br> 
+ 
+### POST - Agregar un Componente
 
- #### Listado Paginado de Componentes 
-  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/listado_componentes.png)
+### RequestBody
+ ![Index app](./doc/swagger/doc_openapi_componenteController/post/postComponente.png)
  
+### Response
+ ![Index app](./doc/swagger/doc_openapi_componenteController/post/postComponenteResponse.png)
+ 
+### getByDescripcion
+![Index app](./doc/swagger/doc_openapi_componenteController/post/getByDescripcionAfterPost.png)
+ 
+### Response
+ ![Index app](./doc/swagger/doc_openapi_componenteController/post/getByDescripcionResponseAfterPost.png)
+ 
+ 
+ <br> 
 
-### Método POST / Agregar un Componente
+### PUT - Actualizar un Componente.
 
-#### RequestBody
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/postComponente.png)
- 
- #### Response
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/postComponenteResponse.png)
- 
- #### getByDescripcion
-![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/getByDescripcionAfterPost.png)
- 
-####  Response
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/post/getByDescripcionResponseAfterPost.png)
- 
- 
- </br> 
-
-### Método PUT / Actualizar un Componente.
-
-#### RequestBody
+### RequestBody
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/put.png)
  
-#### Response
+### Response
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/putResponse.png)
  
-#### getByFabricante
+### getByFabricante
 ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteAfterPut.png)
  
-#### Response
+### Response
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteResponseAfterPut.png)
  
    
- </br> 
+ <br> 
 
-### Método DELETE / Eliminar un Componente según su id
+### DELETE - Eliminar un Componente
 
-#### RequestBody
+### RequestBody
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/deleteComp.png)
  
-
-#### getById..
+### getById..
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDelete.png)
  
-#### Response lado del server..
+### Response lado del server..
 ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDeleteServerMsj.jpg)
  
 <br>
