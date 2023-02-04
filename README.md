@@ -227,16 +227,16 @@ Api Restful para la gestión de Componentes de Microelectrónica implementada co
 ### PUT - Actualizar un Componente.
 
 ### RequestBody
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/put.png)
+ ![Index app](./doc/swagger/doc_openapi_componenteController/put/put.png)
  
 ### Response
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/putResponse.png)
+ ![Index app](./doc/swagger/doc_openapi_componenteController/put/putResponse.png)
  
 ### getByFabricante
-![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteAfterPut.png)
+![Index app](./doc/swagger/doc_openapi_componenteController/put/getByFabricanteAfterPut.png)
  
 ### Response
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteResponseAfterPut.png)
+ ![Index app](./doc/swagger/doc_openapi_componenteController/put/getByFabricanteResponseAfterPut.png)
  
    
  <br> 
@@ -244,18 +244,17 @@ Api Restful para la gestión de Componentes de Microelectrónica implementada co
 ### DELETE - Eliminar un Componente
 
 ### RequestBody
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/deleteComp.png)
+ ![Index app](./doc_openapi_componenteController/delete/deleteComp.png)
  
 ### getById..
- ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDelete.png)
+ ![Index app](./doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDelete.png)
  
 ### Response lado del server..
-![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDeleteServerMsj.jpg)
+![Index app](./doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDeleteServerMsj.jpg)
  
 <br>
 
 </details>
-
 
 
 
@@ -270,6 +269,7 @@ Api Restful para la gestión de Componentes de Microelectrónica implementada co
 <details>
  <summary>Ver</summary>
 
+![Index app](./doc/youtube/playlist.png)
 
  <br>
 
