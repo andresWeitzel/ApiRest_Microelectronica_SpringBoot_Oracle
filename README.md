@@ -269,6 +269,7 @@ Api Restful para la gestión de Componentes de Microelectrónica implementada co
 <details>
  <summary>Ver</summary>
 
+### [Visualizar prueba de funcionalidades](https://www.youtube.com/playlist?list=PLCl11UFjHurAmc1wYGmkSdOOYyeo_6Ekj)
 ![Index app](./doc/youtube/playlist.png)
 
  <br>
