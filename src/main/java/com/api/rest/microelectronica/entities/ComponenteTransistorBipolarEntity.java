@@ -25,7 +25,7 @@ public class ComponenteTransistorBipolarEntity {
 	@Column(name="id") 
 	private int id;
 	
-	@Column(name="id_componente")
+	@Column(name="id_componente",unique=true)
 	private int idComponente;
 	
 	@Column(name="tipo")

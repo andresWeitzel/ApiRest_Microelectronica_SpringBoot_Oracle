@@ -25,7 +25,7 @@ public class ComponenteDetalleEntity {
 	@Column(name="id") 
 	private int id;
 	
-	@Column(name="id_componente")
+	@Column(name="id_componente", unique=true)
 	private int idComponente;
 	
 	@Column(name="hoja_de_datos")

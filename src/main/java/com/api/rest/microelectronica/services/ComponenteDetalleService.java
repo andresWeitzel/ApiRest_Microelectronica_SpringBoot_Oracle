@@ -308,7 +308,7 @@ public class ComponenteDetalleService {
 	public Page<ComponenteDetalleEntity> findByVoltajeMaxEntrada(String voltajeMaxEntrada, Pageable pageable) {
 		
 		try {
-			return iComponenteDetalleRepository.findByVoltajeMinEntrada(voltajeMaxEntrada, pageable);
+			return iComponenteDetalleRepository.findByVoltajeMaxEntrada(voltajeMaxEntrada, pageable);
 		} catch (Exception e) {
 			logger.error("ERROR findByVoltajeMaxEntrada : NO SE HA ENCONTRADO EL LISTADO DE COMPONENTES CON EL VOLTAJE MAXIMO DE ENTRADA SOLICITADO. CAUSADO POR "+e);
 			throw new ComponenteDetalleNotFoundException("NO SE PUDO ENCONTRAR EL LISTADO DE COMPONENTES CON EL VOLTAJE MAXIMO DE ENTRADA SOLICITADO "+e);
