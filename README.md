@@ -1,8 +1,67 @@
-# ApiRest_Microelectronica_SpringBoot_Oracle
+<img src="./doc/swagger/doc_openapi_componenteController/doc-componente_controller.png" style="width: 100%; height: 80%"/>
 
-* Api Restful para la gestión de Componentes de Microelectrónica.
-* A raíz de esta api ha surgido el desarrollo de una aplicación web para gestionar dichos productos. Repositorio : https://github.com/andresWeitzel/AppGestionMicroelectronica_SpringBoot.
-* Esta Api Restful consta de todas las Operaciones CRUD , Búsquedas independientes de tipo like , paginaciones, búsquedas con filtro, todos los objetos de tipo getBy se manipulan como paginados, salvo los getById que se requiere un response por objeto. Se Desarrollan Clases Específicas para el Manejo de Excepciones para cada Servicio Completo , todas las funcionalidades tienen generación de logs en el Server para los errores y excepciones personalizadas, documentación completa de la Api con open-apiV3.0 para la visualización con swagger-UI, las anotaciones de dicha doc se aplican junto con los códigos de respuesta de tipo HTTP para cada función en los controllers.
+# ApiRest_Microelectronica_SpringBoot_Oracle
+Api Restful para la gestión de Componentes de Microelectrónica implementada con Spring boot, Spring data, Maven, UI Swagger, Lombok, Oracle XE 21c, Git y otras tecnologías.
+
+</br>
+
+* [Repositorio base de datos](https://github.com/andresWeitzel/db_microelectronica_Oracle)
+* [PlayList del Proyecto](https://www.youtube.com/playlist?list=PLCl11UFjHurAmc1wYGmkSdOOYyeo_6Ekj)
+ 
+
+
+<br>
+
+## Índice 📜
+
+<details>
+ <summary> Ver </summary>
+ 
+ <br>
+ 
+### Sección 1) Descripción, Tecnologías y Dependencias 
+
+ - [1.0) Descripción del Proyecto.](#10-descripción-)
+ - [1.1) Ejecución del Proyecto.](#11-ejecución-del-proyecto-)
+ - [1.2) Patrones de Diseño.](#12-patrones-de-diseño-)
+ - [1.3) Tecnologías.](#13-tecnologías-)
+ - [1.4) Dependencias Maven.](#14-dependencias-maven-)
+
+  
+### Sección 2) Endpoints y Recursos 
+ 
+ - [2.0) EndPoints.](#endpoints-)
+ - [2.1) Recursos y Servicios.](#recursos-y-servicios-)
+  
+  
+### Sección 3) Prueba de Funcionalidad y Referencias
+ 
+ - [3.0) Prueba de Funcionalidad.](#30-prueba-de-funcionalidad-)
+ - [3.1) Referencias.](#31-referencias-)
+	  
+  
+  
+<br>
+
+</details>
+
+
+
+
+<br>
+
+## Sección 1) Descripción, Tecnologías y Dependencias 
+
+
+### 1.0) Descripción [🔝](#índice-) 
+
+<details>
+  <summary>Ver</summary>
+ 
+ <br>
+ 
+
+* Esta Api Restful consta de todas las Operaciones CRUD , b úsquedas independientes de tipo like , paginaciones, búsquedas con filtro, todos los objetos de tipo getBy se manipulan como paginados, salvo los getById que se requiere un response por objeto. Se Desarrollan Clases Específicas para el Manejo de Excepciones para cada Servicio Completo , todas las funcionalidades tienen generación de logs en el Server para los errores y excepciones personalizadas, documentación completa de la Api con open-apiV3.0 para la visualización con swagger-UI, las anotaciones de dicha doc se aplican junto con los códigos de respuesta de tipo HTTP para cada función en los controllers.
 * Se pone a disposición todos los recursos anteriores SÓLO para Componentes y Componentes Detalles . 
 
 </br>
@@ -10,27 +69,135 @@
 * Repositorio de la Base de Datos de la Api : https://github.com/andresWeitzel/db_microelectronica_Oracle.
 * PlayList del Proyecto : https://www.youtube.com/playlist?list=PLCl11UFjHurAmc1wYGmkSdOOYyeo_6Ekj.
 
-</br>
 
-### EndPoints y Recursos. Vista Swagger UI.
+<br>
 
-### EndPoints
+</details>
+
+
+
+### 1.1) Ejecución del Proyecto [🔝](#índice-)
+
+<details>
+  <summary>Ver</summary>
+  
+ <br>  
+  
+* Ejecutar la base de datos del proyecto.
+* Crear un entorno de trabajo a través de algún IDE (Para este caso utilizo STS 4). 
+* Clonar el Proyecto (`git clone https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle`)
+* Utilizando sts en el package explorer click derecho sobre el proyecto, run as spring boot app.
+* Comprobar cada endpoint.
+
+<br>
+
+</details>
+
+
+
+### 1.2) Patrones de Diseño [🔝](#índice-)
+
+<details>
+  <summary>Ver</summary>
+  <br>
+
+| **Patrón de Diseño** | **Finalidad** |               
+| ------------- | ------------- |
+| [DAO](https://www.oscarblancarteblog.com/2018/12/10/data-access-object-dao-pattern/) | Uso de interfaces entre la aplicación y el almacenamiento de datos. |
+| [MVC](https://keepcoding.io/blog/que-es-el-patron-de-arquitectura-mvvm/) | Separación y Representación de los Datos, Manejo de errores, Escalabilidad, etc  |
+
+<br>
+</details>
+
+
+
+### 1.3) Tecnologías [🔝](#índice-)
+
+<details>
+  <summary>Ver</summary>
+ 
+ <br>
+
+| Tecnologías BACKEND | Versión | Finalidad
+| ------------- | ------------- | ------------- |
+| [Java]( https://www.oracle.com/java/technologies/javase/jdk12-archive-downloads.html) |   12.0.2 | JDK |
+| [Spring Tool Suite 4](https://spring.io/blog/2021/06/21/spring-tools-4-11-0-released) | 4.9.0  | IDE |
+| [Spring Boot](https://spring.io/) |   2.6.4  | Framework |
+| [Spring Boot Data JPA](https://spring.io/projects/spring-data-jpa)  | 2.6.3 | Mapeo de objetos y persistencia en la db |
+| [Spring Security](https://spring.io/projects/spring-security) | 2.6.7 | Servicios de Seguridad |
+| [JSON Web Token](https://jwt.io/) | 0.9.1 | Creación de tokens de acceso | 
+| [Maven](https://maven.apache.org/) |  4.0.0 | Gestor de Proyectos |
+| [Postman](https://www.postman.com/) | 9.4.1 | Test de Apis |
+| [Lombok](https://projectlombok.org/) | 1.18.22 | Automatización de Código | 
+| [Open-Api](https://www.openapis.org/) | 1.6.4 | Documentación de la Api |
+| [Oracle XE 21c](https://www.oracle.com/database/technologies/xe-downloads.html) | 21.4.1 | Sistema de Gestión de Bases de Datos |
+| [SQL Developer](https://www.oracle.com/database/sqldeveloper/) | 21.4.1  | Editor de Base de Datos |
+| [UI Swagger](https://swagger.io/tools/swagger-ui/) | 1.6.4 | Visualización y Gestión de la Api | 
+| [GNU bash / Terminal](https://www.gnu.org/software/bash/) | 4.4.23  | Bash / Terminal para el manejo e implementación de Git integrado al Spring Tool Suite |
+| [Git](https://git-scm.com/) | 2.29.1  | Control de Versiones |
+
+
+<br>
+
+</details>
+
+
+### 1.4) Dependencias Maven [🔝](#índice-)
+
+<details>
+ <summary>Ver</summary>
+ 
+ <br>
+
+| **Dependencia Maven**  | **Versión** | **Finalidad** |             
+| ------------- | ------------- | ------------- |
+| spring-boot-starter-data-jpa | 2.6.4 | Api de JpaRepository para el manejo de métodos | 
+| spring-boot-starter-test | 2.6.4 | Para Testing | 
+| spring-boot-starter-web | 2.6.4 | Se agrega toda la configuración web automáticamente de Maven a Spring | 
+| springdoc-openapi-ui | 1.6.4 | Plantillas para el Front |
+| spring-boot-devtools | 2.6.4 | Herramientas para el Manejo de Spring Boot | 
+| ojdbc8 | 21.3.0.0 | Driver para el SGDB Oracle | 
+| lombok | 1.18.22 |  Dependencia para la automatización de Código |
+
+
+<br>
+
+</details>
+
+
+
+<br>
+
+## Sección 2) EndPoints y Recursos
+
+### 2.0) EndPoints [🔝](#índice-)
+
+<details>
+ <summary>Ver</summary>
+ 
+### EndPoints Generales
 * http://localhost:8096/swagger-ui/index.html#/componente-controller
 * http://localhost:8096/swagger-ui/index.html#/componente-detalle-controller
 * http://localhost:8096/swagger-ui/index.html#/componente-transistor-bipolar-controller
 * http://localhost:8096/swagger-ui/index.html#/componente-capacitor-electrolitico-controller
 
-* Los recursos de cada endpoint se muestran en las siguientes imágenes respectivas a cada controller.
-
-</br>
 
 ### Controllers .
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/controllers.png)
  
  ### Documentación ComponenteController.
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/doc-componente_controller.png)
- 
- </br>
+
+* Algunos de los recursos de cada endpoint se muestran en las siguientes imágenes.
+
+<br>
+
+</details>
+
+### 2.1) Recursos por Endpoints. (Swagger UI) [🔝](#índice-)
+
+<details>
+ <summary>Ver</summary>
  
  ### Operaciones CRUD.
  ### Método GET / Listado de Componentes
@@ -59,7 +226,6 @@
  
  </br> 
 
-
 ### Método PUT / Actualizar un Componente.
 
 #### RequestBody
@@ -74,11 +240,8 @@
 #### Response
  ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/put/getByFabricanteResponseAfterPut.png)
  
-
-
    
  </br> 
-
 
 ### Método DELETE / Eliminar un Componente según su id
 
@@ -92,70 +255,35 @@
 #### Response lado del server..
 ![Index app](https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle/blob/master/doc/swagger/doc_openapi_componenteController/delete/getByIdAfterDeleteServerMsj.jpg)
  
- 
-</br>
+<br>
 
-### Tecnologías Implementadas
-
-| **Tecnologías** | **Versión** | **Finalidad** |               
-| ------------- | ------------- | ------------- |
-| Java |   12.0.2 | JDK |
-| Spring Tool Suite 4 | 4.9.0  | IDE |
-| Spring Boot |   2.6.4  | Framework |
-| Spring Boot Data JPA  | 2.6.3 | Mapeo de objetos y persistencia en la db |
-| Lombok | 1.18.22 | Automatización de Código | 
-| Open-Api y UI Swagger | 1.6.4 | Documentación de la Api | 
-| UI Swagger | 1.6.4 | Visualización y Gestión de la Api | 
-| Maven |  4.0.0 | Gestor de Proyectos |
-| Oracle XE 21c | 21.4.1 | Sistema de Gestión de Bases de Datos |
-| SQL Developer | 21.4.1  | Editor de Base de Datos |
-| CMD | 10 | Símbolo del Sistema para linea de comandos | 
-| GNU bash / Terminal | 4.4.23  | Bash / Terminal para el manejo e implementación de Git integrado al Spring Tool Suite |
-| Git | 2.29.1  | Control de Versiones |
-
-
-</br>
-
-### Descarga y Documentacion de las Tecnologías Implementadas.
-
-| **Tecnología**  | **Descarga** | **Documentación** |               
-| ------------- | ------------- | ------------- |
-| Java-JDK 12 | https://www.oracle.com/java/technologies/javase/jdk12-archive-downloads.html |  https://docs.oracle.com/en/ |
-| Spring Tool Suite 4 |https://spring.io/tools | https://spring.io/guides |
-| Lombok | https://projectlombok.org/download | https://projectlombok.org/download |
-| Open UI |https://open-ui.org/ | https://open-ui.org/ |
-| Maven Repository | https://mvnrepository.com/ | https://mvnrepository.com/ | 
-| Oracle | https://www.oracle.com/database/technologies/oracle21c-windows-downloads.html | https://www.oracle.com/database/technologies/oracle21c-windows-downloads.html|
-| SQL Developer | https://www.oracle.com/tools/downloads/sqldev-downloads.html | https://www.oracle.com/tools/downloads/sqldev-downloads.html |
-| Git  | https://git-scm.com/downloads |  https://git-scm.com/docs |
-
-</br>
-
-### Patrones de Diseño Implementados.
-
-| **Patrón de Diseño** | **Finalidad** |               
-| ------------- | ------------- |
-| DAO | Uso de interfaces entre la aplicación y el almacenamiento de datos. |
-| MVC | Separación y Representación de los Datos, Manejo de errores, Escalabilidad, etc  |
-
-</br>
-
-### Dependencias Implementadas
-
-| **Dependencia Maven**  | **Versión** | **Finalidad** |             
-| ------------- | ------------- | ------------- |
-| spring-boot-starter-data-jpa | 2.6.4 | Api de JpaRepository para el manejo de métodos | 
-| spring-boot-starter-test | 2.6.4 | Para Testing | 
-| spring-boot-starter-web | 2.6.4 | Se agrega toda la configuración web automáticamente de Maven a Spring | 
-| springdoc-openapi-ui | 1.6.4 | Plantillas para el Front |
-| spring-boot-devtools | 2.6.4 | Herramientas para el Manejo de Spring Boot | 
-| ojdbc8 | 21.3.0.0 | Driver para el SGDB Oracle | 
-| lombok | 1.18.22 |  Dependencia para la automatización de Código |
+</details>
 
 
 
 
-</br>
+
+<br>
+
+## Sección 3) Prueba de Funcionalidad y Referencias
+
+
+### 3.0) Prueba de Funcionalidad [🔝](#índice-)
+
+<details>
+ <summary>Ver</summary>
+
+
+ <br>
+
+</details>
+
+
+### 3.1) Referencias [🔝](#índice-)
+
+<details>
+ <summary>Ver</summary>
+
 
 ### Documentación No Oficial Recomendada.
 
@@ -165,9 +293,25 @@
 * Códigos HTTP de respuestas desarrollar en apis :https://www.ibm.com/docs/es/odm/8.5.1?topic=api-rest-response-codes-error-messages
 
 
+ <br>
+
+</details>
 
 
-<hr>
+
+
+
+<br>
+
+<br>
+
+<br>
+
+### `Siguiente sección en proceso de actualización` 
+
+<details>
+ <summary>Ver</summary>
+  
 
 ## ` Documentación y Guía del Proyecto `
 #### (Esta Documentación que Desarrollé es para la Creación y Configuración de la API, Manejo y Dependencias de Maven, Spring Tool Suite, Spring Booot, Hibernate-JPA, Oracle, Open-Api, Swagger UI y otros usos. Recomiendo Leerla y Realizar todo paso a paso como se indica en la misma).
@@ -2080,7 +2224,8 @@ public class ComponenteController {
 * git push -f --set-upstream origin master
 
 
-</br>
+ <br>
 
+</details>
 
 
