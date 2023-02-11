@@ -31,7 +31,7 @@ Api Restful para la gestión de Componentes de Microelectrónica implementada co
 ### Sección 2) Endpoints y Recursos 
  
  - [2.0) EndPoints.](#20-endpoints-)
- - [2.1) Recursos y Servicios.](#21-recursos-y-servicios-)
+ - [2.1) Recursos por endpoints.](#21-recursos-por-endpoints-)
   
   
 ### Sección 3) Prueba de Funcionalidad y Referencias
