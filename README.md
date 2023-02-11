@@ -85,7 +85,8 @@ Api Restful para la gestión de Componentes de Microelectrónica implementada co
 * Ejecutar la base de datos del proyecto.
 * Crear un entorno de trabajo a través de algún IDE (Para este caso utilizo STS 4). 
 * Clonar el Proyecto (`git clone https://github.com/andresWeitzel/ApiRest_Microelectronica_SpringBoot_Oracle`)
-* Utilizando sts en el package explorer click derecho sobre el proyecto, run as spring boot app.
+* Utilizando sts, dentro del package explorer click derecho sobre el proyecto, run as spring boot app.
+* Verificar logs del server.
 * Comprobar cada endpoint.
 
 <br>
