@@ -188,16 +188,16 @@ Api Restful para la gestión de Componentes de Microelectrónica implementada co
  ### Documentación ComponenteController.
  ![Index app](./doc/swagger/doc_openapi_componenteController/doc-componente_controller.png)
 
-* Algunos de los recursos de cada endpoint se muestran en las siguientes imágenes.
-
 <br>
 
 </details>
 
-### 2.1) Recursos por Endpoints. (Swagger UI) [🔝](#índice-)
+### 2.1) Recursos por Endpoints. [🔝](#índice-)
 
 <details>
  <summary>Ver</summary>
+
+* Algunos de los recursos de cada endpoint se muestran en las siguientes imágenes.
  
 ###  GET - Listado de Componentes
 ### Listado Completo de Componentes desde el Nagevador
