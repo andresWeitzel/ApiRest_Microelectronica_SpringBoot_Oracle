@@ -1,4 +1,4 @@
-<img src="./doc/img/swagger/doc_openapi_componenteController/doc-componente_controller.png" style="width: 100%; height: 80%"/>
+<img src="./doc/img/swagger/doc_openapi_componenteController/listado_componentes.png" style="width: 100%; height: 80%"/>
 
   <div align="right">
     <img width="28" height="30" src="./doc/icons/backend/java/png/java.png" />
